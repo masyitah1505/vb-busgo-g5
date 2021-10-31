@@ -107,6 +107,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="RegisterStaffDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterStaffDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="adminRegister.resx">
@@ -138,6 +143,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="RegisterStaffDataSet.xsc">
+      <DependentUpon>RegisterStaffDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RegisterStaffDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegisterStaffDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegisterStaffDataSet.xss">
+      <DependentUpon>RegisterStaffDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\bgbusgo.jpg" />
   </ItemGroup>
   <ItemGroup>
