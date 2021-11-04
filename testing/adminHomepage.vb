@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports System.IO
 Public Class adminHomepage
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Malavika\Desktop\VB.NET\A.PROJECT\vb-busgo-g5\testing\Database\RegisterStaff.accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " & Application.StartupPath & "\RegisterStaff.accdb")
     Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
         If UsernameTextBox.Text = Nothing Or PasswordTextBox.Text = Nothing Then
             MessageBox.Show("Please Fill Up all the Fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
