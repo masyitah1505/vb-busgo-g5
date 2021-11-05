@@ -385,6 +385,7 @@ Partial Class bookBus
         Me.ViewTicketButton.TabIndex = 34
         Me.ViewTicketButton.Text = "View Ticket"
         Me.ViewTicketButton.UseVisualStyleBackColor = False
+        Me.ViewTicketButton.Visible = False
         '
         'Label6
         '

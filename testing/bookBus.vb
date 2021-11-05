@@ -146,8 +146,4 @@ Public Class bookBus
         ViewTicketButton.Show()
     End Sub
 
-    Private Sub ViewTicketButton_Click(sender As Object, e As EventArgs) Handles ViewTicketButton.Click
-        Me.Hide()
-    End Sub
-
 End Class
