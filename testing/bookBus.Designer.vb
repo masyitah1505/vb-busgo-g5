@@ -39,6 +39,8 @@ Partial Class bookBus
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TicketPriceTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.SeatNoComboBox = New System.Windows.Forms.ComboBox()
+        Me.SeatRowComboBox = New System.Windows.Forms.ComboBox()
         Me.DepartureTimeComboBox = New System.Windows.Forms.ComboBox()
         Me.DestinationComboBox = New System.Windows.Forms.ComboBox()
         Me.CurrentPlaceComboBox = New System.Windows.Forms.ComboBox()
@@ -54,9 +56,6 @@ Partial Class bookBus
         Me.Label6 = New System.Windows.Forms.Label()
         Me.FullnameTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.LeftRadioButton = New System.Windows.Forms.RadioButton()
-        Me.RightRadioButton = New System.Windows.Forms.RadioButton()
-        Me.SeatComboBox = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -149,9 +148,9 @@ Partial Class bookBus
         Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(8, 106)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(33, 14)
+        Me.Label12.Size = New System.Drawing.Size(59, 14)
         Me.Label12.TabIndex = 31
-        Me.Label12.Text = "Cash:"
+        Me.Label12.Text = "Cash (RM):"
         '
         'CashTextBox
         '
@@ -208,9 +207,8 @@ Partial Class bookBus
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.SeatComboBox)
-        Me.GroupBox1.Controls.Add(Me.RightRadioButton)
-        Me.GroupBox1.Controls.Add(Me.LeftRadioButton)
+        Me.GroupBox1.Controls.Add(Me.SeatNoComboBox)
+        Me.GroupBox1.Controls.Add(Me.SeatRowComboBox)
         Me.GroupBox1.Controls.Add(Me.DepartureTimeComboBox)
         Me.GroupBox1.Controls.Add(Me.DestinationComboBox)
         Me.GroupBox1.Controls.Add(Me.CurrentPlaceComboBox)
@@ -227,6 +225,24 @@ Partial Class bookBus
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Bus Details"
+        '
+        'SeatNoComboBox
+        '
+        Me.SeatNoComboBox.FormattingEnabled = True
+        Me.SeatNoComboBox.Items.AddRange(New Object() {"LEFT 1", "LEFT 2", "RIGHT 1", "RIGHT 2"})
+        Me.SeatNoComboBox.Location = New System.Drawing.Point(106, 128)
+        Me.SeatNoComboBox.Name = "SeatNoComboBox"
+        Me.SeatNoComboBox.Size = New System.Drawing.Size(131, 21)
+        Me.SeatNoComboBox.TabIndex = 25
+        '
+        'SeatRowComboBox
+        '
+        Me.SeatRowComboBox.FormattingEnabled = True
+        Me.SeatRowComboBox.Items.AddRange(New Object() {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"})
+        Me.SeatRowComboBox.Location = New System.Drawing.Point(106, 157)
+        Me.SeatRowComboBox.Name = "SeatRowComboBox"
+        Me.SeatRowComboBox.Size = New System.Drawing.Size(131, 21)
+        Me.SeatRowComboBox.TabIndex = 24
         '
         'DepartureTimeComboBox
         '
@@ -332,9 +348,9 @@ Partial Class bookBus
         Me.Label11.ForeColor = System.Drawing.Color.White
         Me.Label11.Location = New System.Drawing.Point(8, 80)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(34, 14)
+        Me.Label11.Size = New System.Drawing.Size(60, 14)
         Me.Label11.TabIndex = 29
-        Me.Label11.Text = "Total:"
+        Me.Label11.Text = "Total (RM):"
         '
         'GroupBox3
         '
@@ -407,36 +423,6 @@ Partial Class bookBus
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Pessenger's Details"
         '
-        'LeftRadioButton
-        '
-        Me.LeftRadioButton.AutoSize = True
-        Me.LeftRadioButton.Location = New System.Drawing.Point(99, 134)
-        Me.LeftRadioButton.Name = "LeftRadioButton"
-        Me.LeftRadioButton.Size = New System.Drawing.Size(43, 17)
-        Me.LeftRadioButton.TabIndex = 22
-        Me.LeftRadioButton.TabStop = True
-        Me.LeftRadioButton.Text = "Left"
-        Me.LeftRadioButton.UseVisualStyleBackColor = True
-        '
-        'RightRadioButton
-        '
-        Me.RightRadioButton.AutoSize = True
-        Me.RightRadioButton.Location = New System.Drawing.Point(187, 134)
-        Me.RightRadioButton.Name = "RightRadioButton"
-        Me.RightRadioButton.Size = New System.Drawing.Size(50, 17)
-        Me.RightRadioButton.TabIndex = 23
-        Me.RightRadioButton.TabStop = True
-        Me.RightRadioButton.Text = "Right"
-        Me.RightRadioButton.UseVisualStyleBackColor = True
-        '
-        'SeatComboBox
-        '
-        Me.SeatComboBox.FormattingEnabled = True
-        Me.SeatComboBox.Location = New System.Drawing.Point(106, 157)
-        Me.SeatComboBox.Name = "SeatComboBox"
-        Me.SeatComboBox.Size = New System.Drawing.Size(131, 21)
-        Me.SeatComboBox.TabIndex = 24
-        '
         'bookBus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -491,7 +477,6 @@ Partial Class bookBus
     Friend WithEvents DestinationComboBox As ComboBox
     Friend WithEvents CurrentPlaceComboBox As ComboBox
     Friend WithEvents BusNameComboBox As ComboBox
-    Friend WithEvents SeatComboBox As ComboBox
-    Friend WithEvents RightRadioButton As RadioButton
-    Friend WithEvents LeftRadioButton As RadioButton
+    Friend WithEvents SeatRowComboBox As ComboBox
+    Friend WithEvents SeatNoComboBox As ComboBox
 End Class

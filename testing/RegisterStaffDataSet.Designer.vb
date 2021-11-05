@@ -328,6 +328,8 @@ Partial Public Class RegisterStaffDataSet
         
         Private columnDepartureTime As Global.System.Data.DataColumn
         
+        Private columnSeatNo As Global.System.Data.DataColumn
+        
         Private columnSeat As Global.System.Data.DataColumn
         
         Private columnFullname As Global.System.Data.DataColumn
@@ -413,6 +415,14 @@ Partial Public Class RegisterStaffDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property SeatNoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSeatNo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property SeatColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnSeat
@@ -480,9 +490,9 @@ Partial Public Class RegisterStaffDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddBusAndPassengersRow(ByVal BusName As String, ByVal CurrentPlace As String, ByVal Destination As String, ByVal DepartureTime As Date, ByVal Seat As String, ByVal Fullname As String, ByVal PhoneNumber As Integer, ByVal Email As String) As BusAndPassengersRow
+        Public Overloads Function AddBusAndPassengersRow(ByVal BusName As String, ByVal CurrentPlace As String, ByVal Destination As String, ByVal DepartureTime As String, ByVal SeatNo As String, ByVal Seat As String, ByVal Fullname As String, ByVal PhoneNumber As Integer, ByVal Email As String) As BusAndPassengersRow
             Dim rowBusAndPassengersRow As BusAndPassengersRow = CType(Me.NewRow,BusAndPassengersRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, BusName, CurrentPlace, Destination, DepartureTime, Seat, Fullname, PhoneNumber, Email}
+            Dim columnValuesArray() As Object = New Object() {Nothing, BusName, CurrentPlace, Destination, DepartureTime, SeatNo, Seat, Fullname, PhoneNumber, Email}
             rowBusAndPassengersRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowBusAndPassengersRow)
             Return rowBusAndPassengersRow
@@ -516,6 +526,7 @@ Partial Public Class RegisterStaffDataSet
             Me.columnCurrentPlace = MyBase.Columns("CurrentPlace")
             Me.columnDestination = MyBase.Columns("Destination")
             Me.columnDepartureTime = MyBase.Columns("DepartureTime")
+            Me.columnSeatNo = MyBase.Columns("SeatNo")
             Me.columnSeat = MyBase.Columns("Seat")
             Me.columnFullname = MyBase.Columns("Fullname")
             Me.columnPhoneNumber = MyBase.Columns("PhoneNumber")
@@ -533,8 +544,10 @@ Partial Public Class RegisterStaffDataSet
             MyBase.Columns.Add(Me.columnCurrentPlace)
             Me.columnDestination = New Global.System.Data.DataColumn("Destination", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDestination)
-            Me.columnDepartureTime = New Global.System.Data.DataColumn("DepartureTime", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnDepartureTime = New Global.System.Data.DataColumn("DepartureTime", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDepartureTime)
+            Me.columnSeatNo = New Global.System.Data.DataColumn("SeatNo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSeatNo)
             Me.columnSeat = New Global.System.Data.DataColumn("Seat", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSeat)
             Me.columnFullname = New Global.System.Data.DataColumn("Fullname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -552,6 +565,8 @@ Partial Public Class RegisterStaffDataSet
             Me.columnBusName.MaxLength = 536870910
             Me.columnCurrentPlace.MaxLength = 536870910
             Me.columnDestination.MaxLength = 536870910
+            Me.columnDepartureTime.MaxLength = 255
+            Me.columnSeatNo.MaxLength = 255
             Me.columnSeat.MaxLength = 255
             Me.columnFullname.MaxLength = 536870910
             Me.columnEmail.MaxLength = 255
@@ -1105,16 +1120,31 @@ Partial Public Class RegisterStaffDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property DepartureTime() As Date
+        Public Property DepartureTime() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableBusAndPassengers.DepartureTimeColumn),Date)
+                    Return CType(Me(Me.tableBusAndPassengers.DepartureTimeColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'DepartureTime' in table 'BusAndPassengers' is DBNull.", e)
                 End Try
             End Get
             Set
                 Me(Me.tableBusAndPassengers.DepartureTimeColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property SeatNo() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBusAndPassengers.SeatNoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'SeatNo' in table 'BusAndPassengers' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBusAndPassengers.SeatNoColumn) = value
             End Set
         End Property
         
@@ -1224,6 +1254,18 @@ Partial Public Class RegisterStaffDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetDepartureTimeNull()
             Me(Me.tableBusAndPassengers.DepartureTimeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsSeatNoNull() As Boolean
+            Return Me.IsNull(Me.tableBusAndPassengers.SeatNoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetSeatNoNull()
+            Me(Me.tableBusAndPassengers.SeatNoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1671,6 +1713,7 @@ Namespace RegisterStaffDataSetTableAdapters
             tableMapping.ColumnMappings.Add("CurrentPlace", "CurrentPlace")
             tableMapping.ColumnMappings.Add("Destination", "Destination")
             tableMapping.ColumnMappings.Add("DepartureTime", "DepartureTime")
+            tableMapping.ColumnMappings.Add("SeatNo", "SeatNo")
             tableMapping.ColumnMappings.Add("Seat", "Seat")
             tableMapping.ColumnMappings.Add("Fullname", "Fullname")
             tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber")
@@ -1679,13 +1722,16 @@ Namespace RegisterStaffDataSetTableAdapters
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `BusAndPassengers` WHERE ((`ID` = ?) AND ((? = 1 AND `DepartureTime` "& _ 
-                "IS NULL) OR (`DepartureTime` = ?)) AND ((? = 1 AND `Seat` IS NULL) OR (`Seat` = "& _ 
-                "?)) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 A"& _ 
-                "ND `Email` IS NULL) OR (`Email` = ?)))"
+                "IS NULL) OR (`DepartureTime` = ?)) AND ((? = 1 AND `SeatNo` IS NULL) OR (`SeatNo"& _ 
+                "` = ?)) AND ((? = 1 AND `Seat` IS NULL) OR (`Seat` = ?)) AND ((? = 1 AND `PhoneN"& _ 
+                "umber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Em"& _ 
+                "ail` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DepartureTime", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DepartureTime", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DepartureTime", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SeatNo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SeatNo", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SeatNo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SeatNo", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Seat", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seat", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Seat", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seat", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PhoneNumber", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PhoneNumber", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -1695,13 +1741,14 @@ Namespace RegisterStaffDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `BusAndPassengers` (`BusName`, `CurrentPlace`, `Destination`, `Depart"& _ 
-                "ureTime`, `Seat`, `Fullname`, `PhoneNumber`, `Email`) VALUES (?, ?, ?, ?, ?, ?, "& _ 
-                "?, ?)"
+                "ureTime`, `SeatNo`, `Seat`, `Fullname`, `PhoneNumber`, `Email`) VALUES (?, ?, ?,"& _ 
+                " ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BusName", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BusName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CurrentPlace", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CurrentPlace", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Destination", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Destination", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DepartureTime", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DepartureTime", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SeatNo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SeatNo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Seat", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seat", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fullname", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fullname", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PhoneNumber", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PhoneNumber", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -1709,23 +1756,26 @@ Namespace RegisterStaffDataSetTableAdapters
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `BusAndPassengers` SET `BusName` = ?, `CurrentPlace` = ?, `Destination` = "& _ 
-                "?, `DepartureTime` = ?, `Seat` = ?, `Fullname` = ?, `PhoneNumber` = ?, `Email` ="& _ 
-                " ? WHERE ((`ID` = ?) AND ((? = 1 AND `DepartureTime` IS NULL) OR (`DepartureTime"& _ 
-                "` = ?)) AND ((? = 1 AND `Seat` IS NULL) OR (`Seat` = ?)) AND ((? = 1 AND `PhoneN"& _ 
-                "umber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Em"& _ 
-                "ail` = ?)))"
+                "?, `DepartureTime` = ?, `SeatNo` = ?, `Seat` = ?, `Fullname` = ?, `PhoneNumber` "& _ 
+                "= ?, `Email` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `DepartureTime` IS NULL) OR ("& _ 
+                "`DepartureTime` = ?)) AND ((? = 1 AND `SeatNo` IS NULL) OR (`SeatNo` = ?)) AND ("& _ 
+                "(? = 1 AND `Seat` IS NULL) OR (`Seat` = ?)) AND ((? = 1 AND `PhoneNumber` IS NUL"& _ 
+                "L) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("BusName", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "BusName", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("CurrentPlace", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "CurrentPlace", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Destination", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Destination", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DepartureTime", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("DepartureTime", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("SeatNo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SeatNo", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Seat", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seat", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fullname", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fullname", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("PhoneNumber", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PhoneNumber", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Email", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Email", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_DepartureTime", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DepartureTime", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_DepartureTime", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "DepartureTime", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_SeatNo", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SeatNo", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_SeatNo", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "SeatNo", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Seat", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seat", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Seat", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Seat", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_PhoneNumber", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "PhoneNumber", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -1738,7 +1788,7 @@ Namespace RegisterStaffDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.testing.My.MySettings.Default.RegisterStaffConnectionString1
+            Me._connection.ConnectionString = Global.testing.My.MySettings.Default.RegisterStaffConnectionString2
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1747,8 +1797,8 @@ Namespace RegisterStaffDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, BusName, CurrentPlace, Destination, DepartureTime, Seat, Fullname, Pho"& _ 
-                "neNumber, Email FROM BusAndPassengers"
+            Me._commandCollection(0).CommandText = "SELECT ID, BusName, CurrentPlace, Destination, DepartureTime, SeatNo, Seat, Fulln"& _ 
+                "ame, PhoneNumber, Email FROM BusAndPassengers"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -1808,35 +1858,42 @@ Namespace RegisterStaffDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_DepartureTime As Global.System.Nullable(Of Date), ByVal Original_Seat As String, ByVal Original_PhoneNumber As Global.System.Nullable(Of Integer), ByVal Original_Email As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_DepartureTime As String, ByVal Original_SeatNo As String, ByVal Original_Seat As String, ByVal Original_PhoneNumber As Global.System.Nullable(Of Integer), ByVal Original_Email As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
-            If (Original_DepartureTime.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_DepartureTime.Value,Date)
-            Else
+            If (Original_DepartureTime Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_DepartureTime,String)
             End If
-            If (Original_Seat Is Nothing) Then
+            If (Original_SeatNo Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Seat,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_SeatNo,String)
             End If
-            If (Original_PhoneNumber.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_PhoneNumber.Value,Integer)
-            Else
+            If (Original_Seat Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Seat,String)
             End If
-            If (Original_Email Is Nothing) Then
+            If (Original_PhoneNumber.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_PhoneNumber.Value,Integer)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Email Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Email,String)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Email,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1857,7 +1914,7 @@ Namespace RegisterStaffDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal BusName As String, ByVal CurrentPlace As String, ByVal Destination As String, ByVal DepartureTime As Global.System.Nullable(Of Date), ByVal Seat As String, ByVal Fullname As String, ByVal PhoneNumber As Global.System.Nullable(Of Integer), ByVal Email As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal BusName As String, ByVal CurrentPlace As String, ByVal Destination As String, ByVal DepartureTime As String, ByVal SeatNo As String, ByVal Seat As String, ByVal Fullname As String, ByVal PhoneNumber As Global.System.Nullable(Of Integer), ByVal Email As String) As Integer
             If (BusName Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -1873,30 +1930,35 @@ Namespace RegisterStaffDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(2).Value = CType(Destination,String)
             End If
-            If (DepartureTime.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(DepartureTime.Value,Date)
-            Else
+            If (DepartureTime Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(DepartureTime,String)
             End If
-            If (Seat Is Nothing) Then
+            If (SeatNo Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Seat,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(SeatNo,String)
             End If
-            If (Fullname Is Nothing) Then
+            If (Seat Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Fullname,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Seat,String)
+            End If
+            If (Fullname Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Fullname,String)
             End If
             If (PhoneNumber.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(PhoneNumber.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(PhoneNumber.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
             If (Email Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Email,String)
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Email,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -1917,7 +1979,7 @@ Namespace RegisterStaffDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal BusName As String, ByVal CurrentPlace As String, ByVal Destination As String, ByVal DepartureTime As Global.System.Nullable(Of Date), ByVal Seat As String, ByVal Fullname As String, ByVal PhoneNumber As Global.System.Nullable(Of Integer), ByVal Email As String, ByVal Original_ID As Integer, ByVal Original_DepartureTime As Global.System.Nullable(Of Date), ByVal Original_Seat As String, ByVal Original_PhoneNumber As Global.System.Nullable(Of Integer), ByVal Original_Email As String) As Integer
+        Public Overloads Overridable Function Update(ByVal BusName As String, ByVal CurrentPlace As String, ByVal Destination As String, ByVal DepartureTime As String, ByVal SeatNo As String, ByVal Seat As String, ByVal Fullname As String, ByVal PhoneNumber As Global.System.Nullable(Of Integer), ByVal Email As String, ByVal Original_ID As Integer, ByVal Original_DepartureTime As String, ByVal Original_SeatNo As String, ByVal Original_Seat As String, ByVal Original_PhoneNumber As Global.System.Nullable(Of Integer), ByVal Original_Email As String) As Integer
             If (BusName Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -1933,59 +1995,71 @@ Namespace RegisterStaffDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Destination,String)
             End If
-            If (DepartureTime.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(DepartureTime.Value,Date)
-            Else
+            If (DepartureTime Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(DepartureTime,String)
             End If
-            If (Seat Is Nothing) Then
+            If (SeatNo Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Seat,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(SeatNo,String)
             End If
-            If (Fullname Is Nothing) Then
+            If (Seat Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Fullname,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Seat,String)
+            End If
+            If (Fullname Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Fullname,String)
             End If
             If (PhoneNumber.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(PhoneNumber.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(PhoneNumber.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             End If
             If (Email Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Email,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Email,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_ID,Integer)
-            If (Original_DepartureTime.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_DepartureTime.Value,Date)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_ID,Integer)
+            If (Original_DepartureTime Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_DepartureTime,String)
+            End If
+            If (Original_SeatNo Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_SeatNo,String)
             End If
             If (Original_Seat Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Seat,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Seat,String)
             End If
             If (Original_PhoneNumber.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_PhoneNumber.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_PhoneNumber.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             End If
             If (Original_Email Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Email,String)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Email,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -2204,7 +2278,7 @@ Namespace RegisterStaffDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.OleDb.OleDbConnection()
-            Me._connection.ConnectionString = Global.testing.My.MySettings.Default.RegisterStaffConnectionString1
+            Me._connection.ConnectionString = Global.testing.My.MySettings.Default.RegisterStaffConnectionString2
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
