@@ -23,71 +23,73 @@ Partial Class bookBus
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(bookBus))
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PayButton = New System.Windows.Forms.Button()
+        Me.ChangeTextBox = New System.Windows.Forms.TextBox()
+        Me.BookButton = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.PhoneNumTextBox = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.CashTextBox = New System.Windows.Forms.TextBox()
+        Me.TotalTextBox = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.ServiceTaxTextBox = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TicketPriceTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DepartureTimeComboBox = New System.Windows.Forms.ComboBox()
+        Me.DestinationComboBox = New System.Windows.Forms.ComboBox()
+        Me.CurrentPlaceComboBox = New System.Windows.Forms.ComboBox()
+        Me.BusNameComboBox = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ViewTicketButton = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.FullnameTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.LeftRadioButton = New System.Windows.Forms.RadioButton()
+        Me.RightRadioButton = New System.Windows.Forms.RadioButton()
+        Me.SeatComboBox = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button2
+        'PayButton
         '
-        Me.Button2.BackColor = System.Drawing.Color.White
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(69, 145)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(97, 43)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "Pay"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.PayButton.BackColor = System.Drawing.Color.White
+        Me.PayButton.ForeColor = System.Drawing.Color.Black
+        Me.PayButton.Location = New System.Drawing.Point(142, 145)
+        Me.PayButton.Name = "PayButton"
+        Me.PayButton.Size = New System.Drawing.Size(97, 43)
+        Me.PayButton.TabIndex = 24
+        Me.PayButton.Text = "Pay"
+        Me.PayButton.UseVisualStyleBackColor = False
         '
-        'TextBox13
+        'ChangeTextBox
         '
-        Me.TextBox13.Location = New System.Drawing.Point(108, 207)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox13.TabIndex = 32
+        Me.ChangeTextBox.Location = New System.Drawing.Point(108, 207)
+        Me.ChangeTextBox.Name = "ChangeTextBox"
+        Me.ChangeTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.ChangeTextBox.TabIndex = 32
         '
-        'Button1
+        'BookButton
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(120, 101)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(97, 43)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Book"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.BookButton.BackColor = System.Drawing.Color.White
+        Me.BookButton.ForeColor = System.Drawing.Color.Black
+        Me.BookButton.Location = New System.Drawing.Point(245, 114)
+        Me.BookButton.Name = "BookButton"
+        Me.BookButton.Size = New System.Drawing.Size(97, 43)
+        Me.BookButton.TabIndex = 23
+        Me.BookButton.Text = "Book"
+        Me.BookButton.UseVisualStyleBackColor = False
         '
         'Label8
         '
@@ -101,12 +103,12 @@ Partial Class bookBus
         Me.Label8.TabIndex = 23
         Me.Label8.Text = "Email:"
         '
-        'TextBox8
+        'EmailTextBox
         '
-        Me.TextBox8.Location = New System.Drawing.Point(106, 71)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox8.TabIndex = 22
+        Me.EmailTextBox.Location = New System.Drawing.Point(106, 71)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.EmailTextBox.TabIndex = 22
         '
         'Label7
         '
@@ -120,12 +122,12 @@ Partial Class bookBus
         Me.Label7.TabIndex = 21
         Me.Label7.Text = "Phone Number:"
         '
-        'TextBox7
+        'PhoneNumTextBox
         '
-        Me.TextBox7.Location = New System.Drawing.Point(106, 45)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox7.TabIndex = 20
+        Me.PhoneNumTextBox.Location = New System.Drawing.Point(106, 45)
+        Me.PhoneNumTextBox.Name = "PhoneNumTextBox"
+        Me.PhoneNumTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.PhoneNumTextBox.TabIndex = 20
         '
         'Label13
         '
@@ -151,19 +153,19 @@ Partial Class bookBus
         Me.Label12.TabIndex = 31
         Me.Label12.Text = "Cash:"
         '
-        'TextBox12
+        'CashTextBox
         '
-        Me.TextBox12.Location = New System.Drawing.Point(108, 103)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox12.TabIndex = 30
+        Me.CashTextBox.Location = New System.Drawing.Point(108, 103)
+        Me.CashTextBox.Name = "CashTextBox"
+        Me.CashTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.CashTextBox.TabIndex = 30
         '
-        'TextBox11
+        'TotalTextBox
         '
-        Me.TextBox11.Location = New System.Drawing.Point(108, 77)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox11.TabIndex = 28
+        Me.TotalTextBox.Location = New System.Drawing.Point(108, 77)
+        Me.TotalTextBox.Name = "TotalTextBox"
+        Me.TotalTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.TotalTextBox.TabIndex = 28
         '
         'Label10
         '
@@ -177,12 +179,12 @@ Partial Class bookBus
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "Service Tax:"
         '
-        'TextBox10
+        'ServiceTaxTextBox
         '
-        Me.TextBox10.Location = New System.Drawing.Point(108, 51)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox10.TabIndex = 26
+        Me.ServiceTaxTextBox.Location = New System.Drawing.Point(108, 51)
+        Me.ServiceTaxTextBox.Name = "ServiceTaxTextBox"
+        Me.ServiceTaxTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.ServiceTaxTextBox.TabIndex = 26
         '
         'Label9
         '
@@ -196,26 +198,28 @@ Partial Class bookBus
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Ticket Price:"
         '
-        'TextBox9
+        'TicketPriceTextBox
         '
-        Me.TextBox9.Location = New System.Drawing.Point(108, 25)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox9.TabIndex = 24
+        Me.TicketPriceTextBox.Location = New System.Drawing.Point(108, 25)
+        Me.TicketPriceTextBox.Name = "TicketPriceTextBox"
+        Me.TicketPriceTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.TicketPriceTextBox.TabIndex = 24
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.SeatComboBox)
+        Me.GroupBox1.Controls.Add(Me.RightRadioButton)
+        Me.GroupBox1.Controls.Add(Me.LeftRadioButton)
+        Me.GroupBox1.Controls.Add(Me.DepartureTimeComboBox)
+        Me.GroupBox1.Controls.Add(Me.DestinationComboBox)
+        Me.GroupBox1.Controls.Add(Me.CurrentPlaceComboBox)
+        Me.GroupBox1.Controls.Add(Me.BusNameComboBox)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(96, 40)
         Me.GroupBox1.Name = "GroupBox1"
@@ -223,6 +227,42 @@ Partial Class bookBus
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Bus Details"
+        '
+        'DepartureTimeComboBox
+        '
+        Me.DepartureTimeComboBox.FormattingEnabled = True
+        Me.DepartureTimeComboBox.Items.AddRange(New Object() {"7.00 AM ", "9.00 AM ", "11.00 AM ", "02.00 PM ", "05.00 PM ", "08.00 PM ", "11.00 PM "})
+        Me.DepartureTimeComboBox.Location = New System.Drawing.Point(106, 100)
+        Me.DepartureTimeComboBox.Name = "DepartureTimeComboBox"
+        Me.DepartureTimeComboBox.Size = New System.Drawing.Size(131, 21)
+        Me.DepartureTimeComboBox.TabIndex = 21
+        '
+        'DestinationComboBox
+        '
+        Me.DestinationComboBox.FormattingEnabled = True
+        Me.DestinationComboBox.Items.AddRange(New Object() {"Terminal Bersepadu Selatan (TBS)", "Jitra Bus Terminal", "Johor Raya Bus Terminal", "Kuanatan Sentral Bus Terminal", "Melaka Sentral Bus Terminal", "Pontian Bus Terminal", "Sungai Petani Bus Station"})
+        Me.DestinationComboBox.Location = New System.Drawing.Point(106, 73)
+        Me.DestinationComboBox.Name = "DestinationComboBox"
+        Me.DestinationComboBox.Size = New System.Drawing.Size(131, 21)
+        Me.DestinationComboBox.TabIndex = 20
+        '
+        'CurrentPlaceComboBox
+        '
+        Me.CurrentPlaceComboBox.FormattingEnabled = True
+        Me.CurrentPlaceComboBox.Items.AddRange(New Object() {"Hentian Bas Greenwood", "Terminal Bersepadu Selatan (TBS)"})
+        Me.CurrentPlaceComboBox.Location = New System.Drawing.Point(106, 47)
+        Me.CurrentPlaceComboBox.Name = "CurrentPlaceComboBox"
+        Me.CurrentPlaceComboBox.Size = New System.Drawing.Size(131, 21)
+        Me.CurrentPlaceComboBox.TabIndex = 19
+        '
+        'BusNameComboBox
+        '
+        Me.BusNameComboBox.FormattingEnabled = True
+        Me.BusNameComboBox.Items.AddRange(New Object() {"Perdana Express", "Sani Express", "Adik Beradik", "Transnasional ", "Perak Transit", "Pancaran Matahari ", "Mayang Sari Express"})
+        Me.BusNameComboBox.Location = New System.Drawing.Point(106, 22)
+        Me.BusNameComboBox.Name = "BusNameComboBox"
+        Me.BusNameComboBox.Size = New System.Drawing.Size(131, 21)
+        Me.BusNameComboBox.TabIndex = 18
         '
         'Label5
         '
@@ -236,13 +276,6 @@ Partial Class bookBus
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "Seat:"
         '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(106, 126)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox5.TabIndex = 16
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -254,13 +287,6 @@ Partial Class bookBus
         Me.Label3.Size = New System.Drawing.Size(86, 14)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Departure Time:"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(106, 100)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox4.TabIndex = 14
         '
         'Label2
         '
@@ -274,13 +300,6 @@ Partial Class bookBus
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Destination Place:"
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(106, 74)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox3.TabIndex = 12
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -293,13 +312,6 @@ Partial Class bookBus
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Current Place:"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(106, 48)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox1.TabIndex = 10
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -311,13 +323,6 @@ Partial Class bookBus
         Me.Label4.Size = New System.Drawing.Size(58, 14)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Bus Name:"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(106, 22)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox2.TabIndex = 8
         '
         'Label11
         '
@@ -334,18 +339,18 @@ Partial Class bookBus
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox3.Controls.Add(Me.Button3)
-        Me.GroupBox3.Controls.Add(Me.Button2)
+        Me.GroupBox3.Controls.Add(Me.ViewTicketButton)
+        Me.GroupBox3.Controls.Add(Me.PayButton)
         Me.GroupBox3.Controls.Add(Me.Label13)
-        Me.GroupBox3.Controls.Add(Me.TextBox13)
+        Me.GroupBox3.Controls.Add(Me.ChangeTextBox)
         Me.GroupBox3.Controls.Add(Me.Label12)
-        Me.GroupBox3.Controls.Add(Me.TextBox12)
+        Me.GroupBox3.Controls.Add(Me.CashTextBox)
         Me.GroupBox3.Controls.Add(Me.Label11)
-        Me.GroupBox3.Controls.Add(Me.TextBox11)
+        Me.GroupBox3.Controls.Add(Me.TotalTextBox)
         Me.GroupBox3.Controls.Add(Me.Label10)
-        Me.GroupBox3.Controls.Add(Me.TextBox10)
+        Me.GroupBox3.Controls.Add(Me.ServiceTaxTextBox)
         Me.GroupBox3.Controls.Add(Me.Label9)
-        Me.GroupBox3.Controls.Add(Me.TextBox9)
+        Me.GroupBox3.Controls.Add(Me.TicketPriceTextBox)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(460, 40)
         Me.GroupBox3.Name = "GroupBox3"
@@ -354,16 +359,16 @@ Partial Class bookBus
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Total Price"
         '
-        'Button3
+        'ViewTicketButton
         '
-        Me.Button3.BackColor = System.Drawing.Color.White
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(128, 308)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(97, 43)
-        Me.Button3.TabIndex = 34
-        Me.Button3.Text = "View Ticket"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.ViewTicketButton.BackColor = System.Drawing.Color.White
+        Me.ViewTicketButton.ForeColor = System.Drawing.Color.Black
+        Me.ViewTicketButton.Location = New System.Drawing.Point(142, 321)
+        Me.ViewTicketButton.Name = "ViewTicketButton"
+        Me.ViewTicketButton.Size = New System.Drawing.Size(97, 43)
+        Me.ViewTicketButton.TabIndex = 34
+        Me.ViewTicketButton.Text = "View Ticket"
+        Me.ViewTicketButton.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -377,23 +382,23 @@ Partial Class bookBus
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "Full Name:"
         '
-        'TextBox6
+        'FullnameTextBox
         '
-        Me.TextBox6.Location = New System.Drawing.Point(106, 19)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(131, 20)
-        Me.TextBox6.TabIndex = 18
+        Me.FullnameTextBox.Location = New System.Drawing.Point(106, 19)
+        Me.FullnameTextBox.Name = "FullnameTextBox"
+        Me.FullnameTextBox.Size = New System.Drawing.Size(131, 20)
+        Me.FullnameTextBox.TabIndex = 18
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.BookButton)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.TextBox8)
+        Me.GroupBox2.Controls.Add(Me.EmailTextBox)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
+        Me.GroupBox2.Controls.Add(Me.PhoneNumTextBox)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
+        Me.GroupBox2.Controls.Add(Me.FullnameTextBox)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(96, 247)
         Me.GroupBox2.Name = "GroupBox2"
@@ -401,6 +406,36 @@ Partial Class bookBus
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Pessenger's Details"
+        '
+        'LeftRadioButton
+        '
+        Me.LeftRadioButton.AutoSize = True
+        Me.LeftRadioButton.Location = New System.Drawing.Point(99, 134)
+        Me.LeftRadioButton.Name = "LeftRadioButton"
+        Me.LeftRadioButton.Size = New System.Drawing.Size(43, 17)
+        Me.LeftRadioButton.TabIndex = 22
+        Me.LeftRadioButton.TabStop = True
+        Me.LeftRadioButton.Text = "Left"
+        Me.LeftRadioButton.UseVisualStyleBackColor = True
+        '
+        'RightRadioButton
+        '
+        Me.RightRadioButton.AutoSize = True
+        Me.RightRadioButton.Location = New System.Drawing.Point(187, 134)
+        Me.RightRadioButton.Name = "RightRadioButton"
+        Me.RightRadioButton.Size = New System.Drawing.Size(50, 17)
+        Me.RightRadioButton.TabIndex = 23
+        Me.RightRadioButton.TabStop = True
+        Me.RightRadioButton.Text = "Right"
+        Me.RightRadioButton.UseVisualStyleBackColor = True
+        '
+        'SeatComboBox
+        '
+        Me.SeatComboBox.FormattingEnabled = True
+        Me.SeatComboBox.Location = New System.Drawing.Point(106, 157)
+        Me.SeatComboBox.Name = "SeatComboBox"
+        Me.SeatComboBox.Size = New System.Drawing.Size(131, 21)
+        Me.SeatComboBox.TabIndex = 24
         '
         'bookBus
         '
@@ -425,36 +460,38 @@ Partial Class bookBus
 
     End Sub
 
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents PayButton As Button
+    Friend WithEvents ChangeTextBox As TextBox
+    Friend WithEvents BookButton As Button
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents EmailTextBox As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents PhoneNumTextBox As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents CashTextBox As TextBox
+    Friend WithEvents TotalTextBox As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents ServiceTaxTextBox As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TicketPriceTextBox As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents ViewTicketButton As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents FullnameTextBox As TextBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents DepartureTimeComboBox As ComboBox
+    Friend WithEvents DestinationComboBox As ComboBox
+    Friend WithEvents CurrentPlaceComboBox As ComboBox
+    Friend WithEvents BusNameComboBox As ComboBox
+    Friend WithEvents SeatComboBox As ComboBox
+    Friend WithEvents RightRadioButton As RadioButton
+    Friend WithEvents LeftRadioButton As RadioButton
 End Class

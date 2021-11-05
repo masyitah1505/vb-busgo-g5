@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Public Class adminRegister
-    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=C:\Users\Malavika\Desktop\VB.NET\A.PROJECT\vb-busgo-g5\testing\Database\RegisterStaff.accdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " & Application.StartupPath & "\RegisterStaff.accdb")
     Private Sub adminRegister_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub

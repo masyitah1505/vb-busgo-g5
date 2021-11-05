@@ -26,3 +26,17 @@ C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj
 C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.exe
 C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.xml
 C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.pdb
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\bin\Debug\testing.exe.config
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\bin\Debug\testing.exe
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\bin\Debug\testing.pdb
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\bin\Debug\testing.xml
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.vbproj.AssemblyReference.cache
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.adminRegister.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.adminHomepage.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.bookBus.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.Resources.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.vbproj.GenerateResource.cache
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.vbproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.exe
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.xml
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.pdb
