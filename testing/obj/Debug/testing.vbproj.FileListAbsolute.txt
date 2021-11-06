@@ -40,3 +40,4 @@ C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.vbproj.Co
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.exe
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.xml
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.pdb
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.busAvailibility.resources

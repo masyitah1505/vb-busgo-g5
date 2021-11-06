@@ -1,13 +1,21 @@
 ﻿Imports System.Data.OleDb
 Public Class bookBus
     Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " & Application.StartupPath & "\RegisterStaff.accdb")
-    Private Sub BookButton_Click(sender As Object, e As EventArgs) Handles BookButton.Click
-        'bus details
+
+    'bus details
         Dim busname,
         currentplace, seatNo,
         seat,
         departuretime,
         destination As String
+
+    'passengers details
+    Dim fullname,
+            phonenumber,
+            email As String
+
+
+    Public Sub BookButton_Click(sender As Object, e As EventArgs) Handles BookButton.Click
 
         busname = BusNameComboBox.Text
         currentplace = CurrentPlaceComboBox.Text
@@ -16,16 +24,9 @@ Public Class bookBus
         seat = SeatRowComboBox.Text
         departuretime = DepartureTimeComboBox.Text
 
-
-        'passengers details
-        Dim fullname,
-            phonenumber,
-            email As String
-
         fullname = FullnameTextBox.Text
         phonenumber = PhoneNumTextBox.Text
         email = EmailTextBox.Text
-
 
         If conn.State = ConnectionState.Closed Then
             conn.Open()
@@ -75,9 +76,6 @@ Public Class bookBus
             End If
 
         End Using
-
-        'pop up confirmation message
-        'MessageBox.Show("Your seat has been succesfully booked!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
         conn.Close()
 
@@ -129,21 +127,34 @@ Public Class bookBus
 
 
         'change it to string
-        'Dim formattedTotalString As String
-        'Dim formattedCashString As String
-        'Dim formattedChangeString As String
-        'Dim messageString As String
+        Dim formattedTotalString As String
+        Dim formattedCashString As String
+        Dim formattedChangeString As String
+        Dim messageString As String
 
-        'formattedTotalString = total.ToString("c")
-        'formattedCashString = cash.ToString("c")
-        'formattedChangeString = change.ToString("c")
-        'update/display change
-        'messageString = "Total : " & formattedTotalString & Environment.NewLine &
-        '               "Cash : " & formattedCashString & Environment.NewLine &
-        '              "Change : " & formattedChangeString & Environment.NewLine
+        formattedTotalString = total.ToString("c")
+        formattedCashString = cash.ToString("c")
+        formattedChangeString = change.ToString("c")
+        'Update/ display change
+        messageString = "Total : " & formattedTotalString & Environment.NewLine &
+                       "Cash : " & formattedCashString & Environment.NewLine &
+                      "Change : " & formattedChangeString & Environment.NewLine
 
-        'MessageBox.Show(messageString, "Payment Receipt BUSGo", MessageBoxButtons.OK)
+        MessageBox.Show(messageString, "Payment Receipt BUSGo", MessageBoxButtons.OK)
         ViewTicketButton.Show()
     End Sub
 
+    Public Sub ViewTicketButton_Click(sender As Object, e As EventArgs) Handles ViewTicketButton.Click
+        Me.Hide()
+        busAvailibility.Show()
+        busAvailibility.BusNameLabel.Text = busname
+        busAvailibility.CurrentPlaceLabel.Text = currentplace
+        busAvailibility.DestinationLabel.Text = destination
+        busAvailibility.DepartureLabel.Text = departuretime
+        busAvailibility.SeatLabel.Text = seatNo
+        busAvailibility.SeatLabel.Text = seat
+        busAvailibility.FullnameLabel.Text = fullname
+        busAvailibility.PhoneNoLabel.Text = phonenumber
+        busAvailibility.EmailLabel.Text = email
+    End Sub
 End Class
