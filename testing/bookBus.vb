@@ -10,8 +10,8 @@ Public Class bookBus
         destination As String
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
-        Me.Close()
-        busAvailability.Show()
+        Me.Hide()
+        designDashboard.Show()
     End Sub
 
 
@@ -22,6 +22,7 @@ Public Class bookBus
 
 
     Public Sub BookButton_Click(sender As Object, e As EventArgs) Handles BookButton.Click
+
 
         busname = BusNameComboBox.Text
         currentplace = CurrentPlaceComboBox.Text
@@ -66,20 +67,47 @@ Public Class bookBus
             create.Parameters.AddWithValue("@PhoneNumber", OleDbType.VarNumeric).Value = PhoneNumTextBox.Text
             create.Parameters.AddWithValue("@Email", OleDbType.VarChar).Value = EmailTextBox.Text
 
-            If create.ExecuteNonQuery Then
-                MessageBox.Show("Your seat has been succesfully booked!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Dim result As DialogResult = MessageBox.Show("Are you confirm to book?",
+                                                      "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                BusNameComboBox.Items.Clear()
-                CurrentPlaceComboBox.Items.Clear()
-                DestinationComboBox.Items.Clear()
-                DepartureTimeComboBox.Items.Clear()
-                SeatNoComboBox.Items.Clear()
-                SeatRowComboBox.Items.Clear()
-                FullnameTextBox.Clear()
-                PhoneNumTextBox.Clear()
-                EmailTextBox.Clear()
+            If result = DialogResult.Yes Then
+                If create.ExecuteNonQuery Then
+                    MessageBox.Show("Your seat has been succesfully booked!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
+                    'BusNameComboBox.Items.Clear()
+                    'CurrentPlaceComboBox.Items.Clear()
+                    'DestinationComboBox.Items.Clear()
+                    'DepartureTimeComboBox.Items.Clear()
+                    'SeatNoComboBox.Items.Clear()
+                    'SeatRowComboBox.Items.Clear()
+                    'FullnameTextBox.Clear()
+                    'PhoneNumTextBox.Clear()
+                    'EmailTextBox.Clear()
+
+                End If
+
+
+            Else
+                MessageBox.Show("Please fil in again your details", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If result = DialogResult.Yes Then
+                    Me.Show()
+                End If
             End If
+
+            'If create.ExecuteNonQuery Then
+            'MessageBox.Show("Your seat has been succesfully booked!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            'BusNameComboBox.Items.Clear()
+            'CurrentPlaceComboBox.Items.Clear()
+            'DestinationComboBox.Items.Clear()
+            'DepartureTimeComboBox.Items.Clear()
+            'SeatNoComboBox.Items.Clear()
+            'SeatRowComboBox.Items.Clear()
+            'FullnameTextBox.Clear()
+            'PhoneNumTextBox.Clear()
+            'EmailTextBox.Clear()
+
+            'End If
 
         End Using
 
@@ -114,7 +142,6 @@ Public Class bookBus
             TotalTextBox.Text = total.ToString
 
         End If
-
     End Sub
 
     Private Sub PayButton_Click(sender As Object, e As EventArgs) Handles PayButton.Click
@@ -148,19 +175,29 @@ Public Class bookBus
 
         MessageBox.Show(messageString, "Payment Receipt BUSGo", MessageBoxButtons.OK)
         ViewTicketButton.Show()
+
     End Sub
 
     Public Sub ViewTicketButton_Click(sender As Object, e As EventArgs) Handles ViewTicketButton.Click
         Me.Hide()
         busReceipt.ShowDialog()
+        'busname = busReceipt.BusNameLabel.Text
         busReceipt.BusNameLabel.Text = busname
+        'currentplace = busReceipt.CurrentPlaceLabel.Text
         busReceipt.CurrentPlaceLabel.Text = currentplace
+        'destination = busReceipt.DestinationLabel.Text
         busReceipt.DestinationLabel.Text = destination
+        'departuretime = busReceipt.DepartureLabel.Text
         busReceipt.DepartureLabel.Text = departuretime
+        'seatNo = busReceipt.SeatLabel.Text
         busReceipt.SeatLabel.Text = seatNo
+        'seat = busReceipt.SeatLabel.Text
         busReceipt.SeatLabel.Text = seat
+        'fullname = busReceipt.FullnameLabel.Text
         busReceipt.FullnameLabel.Text = fullname
+        'phonenumber = busReceipt.PhoneNoLabel.Text
         busReceipt.PhoneNoLabel.Text = phonenumber
+        'email = busReceipt.EmailLabel.Text
         busReceipt.EmailLabel.Text = email
     End Sub
 End Class

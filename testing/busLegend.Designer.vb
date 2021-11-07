@@ -25,6 +25,7 @@ Partial Class busLegend
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(busLegend))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.BackButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label3
@@ -51,6 +52,16 @@ Partial Class busLegend
         Me.Label6.TabIndex = 25
         Me.Label6.Text = "BusGo"
         '
+        'BackButton
+        '
+        Me.BackButton.Location = New System.Drawing.Point(25, 23)
+        Me.BackButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.BackButton.Name = "BackButton"
+        Me.BackButton.Size = New System.Drawing.Size(35, 31)
+        Me.BackButton.TabIndex = 31
+        Me.BackButton.Text = "<"
+        Me.BackButton.UseVisualStyleBackColor = True
+        '
         'busLegend
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -58,6 +69,7 @@ Partial Class busLegend
         Me.BackgroundImage = Global.testing.My.Resources.Resources.busLegend
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label6)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -70,4 +82,5 @@ Partial Class busLegend
 
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents BackButton As Button
 End Class

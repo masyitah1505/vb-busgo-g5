@@ -23,7 +23,6 @@ Partial Class busAvailability
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(busAvailability))
         Dim IDLabel As System.Windows.Forms.Label
         Dim BusNameLabel As System.Windows.Forms.Label
         Dim CurrentPlaceLabel As System.Windows.Forms.Label
@@ -34,6 +33,7 @@ Partial Class busAvailability
         Dim FullnameLabel As System.Windows.Forms.Label
         Dim PhoneNumberLabel As System.Windows.Forms.Label
         Dim EmailLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(busAvailability))
         Me.PreviousButton = New System.Windows.Forms.Button()
         Me.NextButton = New System.Windows.Forms.Button()
         Me.DeleteButton = New System.Windows.Forms.Button()
@@ -44,17 +44,17 @@ Partial Class busAvailability
         Me.BusAndPassengersTableAdapter = New testing.RegisterStaffDataSetTableAdapters.BusAndPassengersTableAdapter()
         Me.TableAdapterManager = New testing.RegisterStaffDataSetTableAdapters.TableAdapterManager()
         Me.BusAndPassengersBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
-        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BusAndPassengersBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
         Me.IDTextBox = New System.Windows.Forms.TextBox()
         Me.BusNameTextBox = New System.Windows.Forms.TextBox()
@@ -66,6 +66,18 @@ Partial Class busAvailability
         Me.FullnameTextBox = New System.Windows.Forms.TextBox()
         Me.PhoneNumberTextBox = New System.Windows.Forms.TextBox()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
+        Me.UpdateButton = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BusNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CurrentPlaceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DestinationDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DepartureTimeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SeatNoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SeatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FullnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhoneNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         IDLabel = New System.Windows.Forms.Label()
         BusNameLabel = New System.Windows.Forms.Label()
         CurrentPlaceLabel = New System.Windows.Forms.Label()
@@ -80,7 +92,98 @@ Partial Class busAvailability
         CType(Me.BusAndPassengersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BusAndPassengersBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BusAndPassengersBindingNavigator.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IDLabel
+        '
+        IDLabel.AutoSize = True
+        IDLabel.Location = New System.Drawing.Point(129, 72)
+        IDLabel.Name = "IDLabel"
+        IDLabel.Size = New System.Drawing.Size(21, 13)
+        IDLabel.TabIndex = 31
+        IDLabel.Text = "ID:"
+        '
+        'BusNameLabel
+        '
+        BusNameLabel.AutoSize = True
+        BusNameLabel.Location = New System.Drawing.Point(129, 98)
+        BusNameLabel.Name = "BusNameLabel"
+        BusNameLabel.Size = New System.Drawing.Size(59, 13)
+        BusNameLabel.TabIndex = 33
+        BusNameLabel.Text = "Bus Name:"
+        '
+        'CurrentPlaceLabel
+        '
+        CurrentPlaceLabel.AutoSize = True
+        CurrentPlaceLabel.Location = New System.Drawing.Point(129, 124)
+        CurrentPlaceLabel.Name = "CurrentPlaceLabel"
+        CurrentPlaceLabel.Size = New System.Drawing.Size(74, 13)
+        CurrentPlaceLabel.TabIndex = 35
+        CurrentPlaceLabel.Text = "Current Place:"
+        '
+        'DestinationLabel
+        '
+        DestinationLabel.AutoSize = True
+        DestinationLabel.Location = New System.Drawing.Point(129, 150)
+        DestinationLabel.Name = "DestinationLabel"
+        DestinationLabel.Size = New System.Drawing.Size(63, 13)
+        DestinationLabel.TabIndex = 37
+        DestinationLabel.Text = "Destination:"
+        '
+        'DepartureTimeLabel
+        '
+        DepartureTimeLabel.AutoSize = True
+        DepartureTimeLabel.Location = New System.Drawing.Point(129, 176)
+        DepartureTimeLabel.Name = "DepartureTimeLabel"
+        DepartureTimeLabel.Size = New System.Drawing.Size(83, 13)
+        DepartureTimeLabel.TabIndex = 39
+        DepartureTimeLabel.Text = "Departure Time:"
+        '
+        'SeatNoLabel
+        '
+        SeatNoLabel.AutoSize = True
+        SeatNoLabel.Location = New System.Drawing.Point(129, 202)
+        SeatNoLabel.Name = "SeatNoLabel"
+        SeatNoLabel.Size = New System.Drawing.Size(49, 13)
+        SeatNoLabel.TabIndex = 41
+        SeatNoLabel.Text = "Seat No:"
+        '
+        'SeatLabel
+        '
+        SeatLabel.AutoSize = True
+        SeatLabel.Location = New System.Drawing.Point(129, 228)
+        SeatLabel.Name = "SeatLabel"
+        SeatLabel.Size = New System.Drawing.Size(32, 13)
+        SeatLabel.TabIndex = 43
+        SeatLabel.Text = "Seat:"
+        '
+        'FullnameLabel
+        '
+        FullnameLabel.AutoSize = True
+        FullnameLabel.Location = New System.Drawing.Point(129, 254)
+        FullnameLabel.Name = "FullnameLabel"
+        FullnameLabel.Size = New System.Drawing.Size(52, 13)
+        FullnameLabel.TabIndex = 45
+        FullnameLabel.Text = "Fullname:"
+        '
+        'PhoneNumberLabel
+        '
+        PhoneNumberLabel.AutoSize = True
+        PhoneNumberLabel.Location = New System.Drawing.Point(129, 280)
+        PhoneNumberLabel.Name = "PhoneNumberLabel"
+        PhoneNumberLabel.Size = New System.Drawing.Size(81, 13)
+        PhoneNumberLabel.TabIndex = 47
+        PhoneNumberLabel.Text = "Phone Number:"
+        '
+        'EmailLabel
+        '
+        EmailLabel.AutoSize = True
+        EmailLabel.Location = New System.Drawing.Point(129, 306)
+        EmailLabel.Name = "EmailLabel"
+        EmailLabel.Size = New System.Drawing.Size(35, 13)
+        EmailLabel.TabIndex = 49
+        EmailLabel.Text = "Email:"
         '
         'PreviousButton
         '
@@ -129,7 +232,7 @@ Partial Class busAvailability
         'BackButton
         '
         Me.BackButton.Location = New System.Drawing.Point(23, 44)
-        Me.BackButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.BackButton.Margin = New System.Windows.Forms.Padding(2)
         Me.BackButton.Name = "BackButton"
         Me.BackButton.Size = New System.Drawing.Size(35, 31)
         Me.BackButton.TabIndex = 30
@@ -174,6 +277,31 @@ Partial Class busAvailability
         Me.BusAndPassengersBindingNavigator.TabIndex = 31
         Me.BusAndPassengersBindingNavigator.Text = "BindingNavigator1"
         '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Add new"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 22)
+        Me.BindingNavigatorCountItem.Text = "of {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        '
         'BindingNavigatorMoveFirstItem
         '
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -201,22 +329,16 @@ Partial Class busAvailability
         '
         Me.BindingNavigatorPositionItem.AccessibleName = "Position"
         Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
         Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
         Me.BindingNavigatorPositionItem.Text = "0"
         Me.BindingNavigatorPositionItem.ToolTipText = "Current position"
         '
-        'BindingNavigatorCountItem
-        '
-        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(35, 15)
-        Me.BindingNavigatorCountItem.Text = "of {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Total number of items"
-        '
         'BindingNavigatorSeparator1
         '
-        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorMoveNextItem
         '
@@ -224,7 +346,7 @@ Partial Class busAvailability
         Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
         Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveNextItem.Text = "Move next"
         '
         'BindingNavigatorMoveLastItem
@@ -233,48 +355,21 @@ Partial Class busAvailability
         Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorMoveLastItem.Text = "Move last"
         '
         'BindingNavigatorSeparator2
         '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorAddNewItem.Text = "Add new"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
-        Me.BindingNavigatorDeleteItem.Text = "Delete"
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'BusAndPassengersBindingNavigatorSaveItem
         '
         Me.BusAndPassengersBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         Me.BusAndPassengersBindingNavigatorSaveItem.Image = CType(resources.GetObject("BusAndPassengersBindingNavigatorSaveItem.Image"), System.Drawing.Image)
         Me.BusAndPassengersBindingNavigatorSaveItem.Name = "BusAndPassengersBindingNavigatorSaveItem"
-        Me.BusAndPassengersBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.BusAndPassengersBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 22)
         Me.BusAndPassengersBindingNavigatorSaveItem.Text = "Save Data"
-        '
-        'IDLabel
-        '
-        IDLabel.AutoSize = True
-        IDLabel.Location = New System.Drawing.Point(129, 72)
-        IDLabel.Name = "IDLabel"
-        IDLabel.Size = New System.Drawing.Size(21, 13)
-        IDLabel.TabIndex = 31
-        IDLabel.Text = "ID:"
         '
         'IDTextBox
         '
@@ -284,15 +379,6 @@ Partial Class busAvailability
         Me.IDTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IDTextBox.TabIndex = 32
         '
-        'BusNameLabel
-        '
-        BusNameLabel.AutoSize = True
-        BusNameLabel.Location = New System.Drawing.Point(129, 98)
-        BusNameLabel.Name = "BusNameLabel"
-        BusNameLabel.Size = New System.Drawing.Size(59, 13)
-        BusNameLabel.TabIndex = 33
-        BusNameLabel.Text = "Bus Name:"
-        '
         'BusNameTextBox
         '
         Me.BusNameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BusAndPassengersBindingSource, "BusName", True))
@@ -300,15 +386,6 @@ Partial Class busAvailability
         Me.BusNameTextBox.Name = "BusNameTextBox"
         Me.BusNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.BusNameTextBox.TabIndex = 34
-        '
-        'CurrentPlaceLabel
-        '
-        CurrentPlaceLabel.AutoSize = True
-        CurrentPlaceLabel.Location = New System.Drawing.Point(129, 124)
-        CurrentPlaceLabel.Name = "CurrentPlaceLabel"
-        CurrentPlaceLabel.Size = New System.Drawing.Size(74, 13)
-        CurrentPlaceLabel.TabIndex = 35
-        CurrentPlaceLabel.Text = "Current Place:"
         '
         'CurrentPlaceTextBox
         '
@@ -318,15 +395,6 @@ Partial Class busAvailability
         Me.CurrentPlaceTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CurrentPlaceTextBox.TabIndex = 36
         '
-        'DestinationLabel
-        '
-        DestinationLabel.AutoSize = True
-        DestinationLabel.Location = New System.Drawing.Point(129, 150)
-        DestinationLabel.Name = "DestinationLabel"
-        DestinationLabel.Size = New System.Drawing.Size(63, 13)
-        DestinationLabel.TabIndex = 37
-        DestinationLabel.Text = "Destination:"
-        '
         'DestinationTextBox
         '
         Me.DestinationTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BusAndPassengersBindingSource, "Destination", True))
@@ -334,15 +402,6 @@ Partial Class busAvailability
         Me.DestinationTextBox.Name = "DestinationTextBox"
         Me.DestinationTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DestinationTextBox.TabIndex = 38
-        '
-        'DepartureTimeLabel
-        '
-        DepartureTimeLabel.AutoSize = True
-        DepartureTimeLabel.Location = New System.Drawing.Point(129, 176)
-        DepartureTimeLabel.Name = "DepartureTimeLabel"
-        DepartureTimeLabel.Size = New System.Drawing.Size(83, 13)
-        DepartureTimeLabel.TabIndex = 39
-        DepartureTimeLabel.Text = "Departure Time:"
         '
         'DepartureTimeTextBox
         '
@@ -352,15 +411,6 @@ Partial Class busAvailability
         Me.DepartureTimeTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DepartureTimeTextBox.TabIndex = 40
         '
-        'SeatNoLabel
-        '
-        SeatNoLabel.AutoSize = True
-        SeatNoLabel.Location = New System.Drawing.Point(129, 202)
-        SeatNoLabel.Name = "SeatNoLabel"
-        SeatNoLabel.Size = New System.Drawing.Size(49, 13)
-        SeatNoLabel.TabIndex = 41
-        SeatNoLabel.Text = "Seat No:"
-        '
         'SeatNoTextBox
         '
         Me.SeatNoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BusAndPassengersBindingSource, "SeatNo", True))
@@ -368,15 +418,6 @@ Partial Class busAvailability
         Me.SeatNoTextBox.Name = "SeatNoTextBox"
         Me.SeatNoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SeatNoTextBox.TabIndex = 42
-        '
-        'SeatLabel
-        '
-        SeatLabel.AutoSize = True
-        SeatLabel.Location = New System.Drawing.Point(129, 228)
-        SeatLabel.Name = "SeatLabel"
-        SeatLabel.Size = New System.Drawing.Size(32, 13)
-        SeatLabel.TabIndex = 43
-        SeatLabel.Text = "Seat:"
         '
         'SeatTextBox
         '
@@ -386,15 +427,6 @@ Partial Class busAvailability
         Me.SeatTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SeatTextBox.TabIndex = 44
         '
-        'FullnameLabel
-        '
-        FullnameLabel.AutoSize = True
-        FullnameLabel.Location = New System.Drawing.Point(129, 254)
-        FullnameLabel.Name = "FullnameLabel"
-        FullnameLabel.Size = New System.Drawing.Size(52, 13)
-        FullnameLabel.TabIndex = 45
-        FullnameLabel.Text = "Fullname:"
-        '
         'FullnameTextBox
         '
         Me.FullnameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BusAndPassengersBindingSource, "Fullname", True))
@@ -402,15 +434,6 @@ Partial Class busAvailability
         Me.FullnameTextBox.Name = "FullnameTextBox"
         Me.FullnameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.FullnameTextBox.TabIndex = 46
-        '
-        'PhoneNumberLabel
-        '
-        PhoneNumberLabel.AutoSize = True
-        PhoneNumberLabel.Location = New System.Drawing.Point(129, 280)
-        PhoneNumberLabel.Name = "PhoneNumberLabel"
-        PhoneNumberLabel.Size = New System.Drawing.Size(81, 13)
-        PhoneNumberLabel.TabIndex = 47
-        PhoneNumberLabel.Text = "Phone Number:"
         '
         'PhoneNumberTextBox
         '
@@ -420,15 +443,6 @@ Partial Class busAvailability
         Me.PhoneNumberTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PhoneNumberTextBox.TabIndex = 48
         '
-        'EmailLabel
-        '
-        EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(129, 306)
-        EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(35, 13)
-        EmailLabel.TabIndex = 49
-        EmailLabel.Text = "Email:"
-        '
         'EmailTextBox
         '
         Me.EmailTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BusAndPassengersBindingSource, "Email", True))
@@ -437,12 +451,96 @@ Partial Class busAvailability
         Me.EmailTextBox.Size = New System.Drawing.Size(100, 20)
         Me.EmailTextBox.TabIndex = 50
         '
+        'UpdateButton
+        '
+        Me.UpdateButton.BackColor = System.Drawing.Color.White
+        Me.UpdateButton.ForeColor = System.Drawing.Color.Black
+        Me.UpdateButton.Location = New System.Drawing.Point(566, 239)
+        Me.UpdateButton.Name = "UpdateButton"
+        Me.UpdateButton.Size = New System.Drawing.Size(97, 43)
+        Me.UpdateButton.TabIndex = 51
+        Me.UpdateButton.Text = "Save"
+        Me.UpdateButton.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.BusNameDataGridViewTextBoxColumn, Me.CurrentPlaceDataGridViewTextBoxColumn, Me.DestinationDataGridViewTextBoxColumn, Me.DepartureTimeDataGridViewTextBoxColumn, Me.SeatNoDataGridViewTextBoxColumn, Me.SeatDataGridViewTextBoxColumn, Me.FullnameDataGridViewTextBoxColumn, Me.PhoneNumberDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.BusAndPassengersBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(343, 288)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(429, 150)
+        Me.DataGridView1.TabIndex = 52
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        '
+        'BusNameDataGridViewTextBoxColumn
+        '
+        Me.BusNameDataGridViewTextBoxColumn.DataPropertyName = "BusName"
+        Me.BusNameDataGridViewTextBoxColumn.HeaderText = "BusName"
+        Me.BusNameDataGridViewTextBoxColumn.Name = "BusNameDataGridViewTextBoxColumn"
+        '
+        'CurrentPlaceDataGridViewTextBoxColumn
+        '
+        Me.CurrentPlaceDataGridViewTextBoxColumn.DataPropertyName = "CurrentPlace"
+        Me.CurrentPlaceDataGridViewTextBoxColumn.HeaderText = "CurrentPlace"
+        Me.CurrentPlaceDataGridViewTextBoxColumn.Name = "CurrentPlaceDataGridViewTextBoxColumn"
+        '
+        'DestinationDataGridViewTextBoxColumn
+        '
+        Me.DestinationDataGridViewTextBoxColumn.DataPropertyName = "Destination"
+        Me.DestinationDataGridViewTextBoxColumn.HeaderText = "Destination"
+        Me.DestinationDataGridViewTextBoxColumn.Name = "DestinationDataGridViewTextBoxColumn"
+        '
+        'DepartureTimeDataGridViewTextBoxColumn
+        '
+        Me.DepartureTimeDataGridViewTextBoxColumn.DataPropertyName = "DepartureTime"
+        Me.DepartureTimeDataGridViewTextBoxColumn.HeaderText = "DepartureTime"
+        Me.DepartureTimeDataGridViewTextBoxColumn.Name = "DepartureTimeDataGridViewTextBoxColumn"
+        '
+        'SeatNoDataGridViewTextBoxColumn
+        '
+        Me.SeatNoDataGridViewTextBoxColumn.DataPropertyName = "SeatNo"
+        Me.SeatNoDataGridViewTextBoxColumn.HeaderText = "SeatNo"
+        Me.SeatNoDataGridViewTextBoxColumn.Name = "SeatNoDataGridViewTextBoxColumn"
+        '
+        'SeatDataGridViewTextBoxColumn
+        '
+        Me.SeatDataGridViewTextBoxColumn.DataPropertyName = "Seat"
+        Me.SeatDataGridViewTextBoxColumn.HeaderText = "Seat"
+        Me.SeatDataGridViewTextBoxColumn.Name = "SeatDataGridViewTextBoxColumn"
+        '
+        'FullnameDataGridViewTextBoxColumn
+        '
+        Me.FullnameDataGridViewTextBoxColumn.DataPropertyName = "Fullname"
+        Me.FullnameDataGridViewTextBoxColumn.HeaderText = "Fullname"
+        Me.FullnameDataGridViewTextBoxColumn.Name = "FullnameDataGridViewTextBoxColumn"
+        '
+        'PhoneNumberDataGridViewTextBoxColumn
+        '
+        Me.PhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber"
+        Me.PhoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber"
+        Me.PhoneNumberDataGridViewTextBoxColumn.Name = "PhoneNumberDataGridViewTextBoxColumn"
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "Email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        '
         'busAvailability
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.testing.My.Resources.Resources.bgbusgo
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.UpdateButton)
         Me.Controls.Add(IDLabel)
         Me.Controls.Add(Me.IDTextBox)
         Me.Controls.Add(BusNameLabel)
@@ -470,7 +568,7 @@ Partial Class busAvailability
         Me.Controls.Add(Me.NextButton)
         Me.Controls.Add(Me.PreviousButton)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "busAvailability"
         Me.Text = "BusGo | Bus Availability"
         CType(Me.RegisterStaffDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -478,6 +576,7 @@ Partial Class busAvailability
         CType(Me.BusAndPassengersBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BusAndPassengersBindingNavigator.ResumeLayout(False)
         Me.BusAndPassengersBindingNavigator.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -514,4 +613,16 @@ Partial Class busAvailability
     Friend WithEvents FullnameTextBox As TextBox
     Friend WithEvents PhoneNumberTextBox As TextBox
     Friend WithEvents EmailTextBox As TextBox
+    Friend WithEvents UpdateButton As Button
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BusNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CurrentPlaceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DestinationDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DepartureTimeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SeatNoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SeatDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents FullnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PhoneNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

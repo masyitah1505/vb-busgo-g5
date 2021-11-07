@@ -71,11 +71,9 @@ Partial Class busReceipt
         Me.ReceiptGroupBox.Controls.Add(Me.Label4)
         Me.ReceiptGroupBox.Controls.Add(Me.Label2)
         Me.ReceiptGroupBox.ForeColor = System.Drawing.Color.White
-        Me.ReceiptGroupBox.Location = New System.Drawing.Point(124, 78)
-        Me.ReceiptGroupBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ReceiptGroupBox.Location = New System.Drawing.Point(93, 63)
         Me.ReceiptGroupBox.Name = "ReceiptGroupBox"
-        Me.ReceiptGroupBox.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.ReceiptGroupBox.Size = New System.Drawing.Size(817, 380)
+        Me.ReceiptGroupBox.Size = New System.Drawing.Size(613, 309)
         Me.ReceiptGroupBox.TabIndex = 0
         Me.ReceiptGroupBox.TabStop = False
         Me.ReceiptGroupBox.Text = "Payment Receipt BusGo"
@@ -86,10 +84,9 @@ Partial Class busReceipt
         Me.EmailLabel.BackColor = System.Drawing.Color.Transparent
         Me.EmailLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EmailLabel.ForeColor = System.Drawing.Color.White
-        Me.EmailLabel.Location = New System.Drawing.Point(237, 273)
-        Me.EmailLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.EmailLabel.Location = New System.Drawing.Point(178, 222)
         Me.EmailLabel.Name = "EmailLabel"
-        Me.EmailLabel.Size = New System.Drawing.Size(73, 18)
+        Me.EmailLabel.Size = New System.Drawing.Size(58, 14)
         Me.EmailLabel.TabIndex = 50
         Me.EmailLabel.Text = "Bus Name:"
         '
@@ -99,10 +96,9 @@ Partial Class busReceipt
         Me.PhoneNoLabel.BackColor = System.Drawing.Color.Transparent
         Me.PhoneNoLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PhoneNoLabel.ForeColor = System.Drawing.Color.White
-        Me.PhoneNoLabel.Location = New System.Drawing.Point(237, 241)
-        Me.PhoneNoLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.PhoneNoLabel.Location = New System.Drawing.Point(178, 196)
         Me.PhoneNoLabel.Name = "PhoneNoLabel"
-        Me.PhoneNoLabel.Size = New System.Drawing.Size(73, 18)
+        Me.PhoneNoLabel.Size = New System.Drawing.Size(58, 14)
         Me.PhoneNoLabel.TabIndex = 49
         Me.PhoneNoLabel.Text = "Bus Name:"
         '
@@ -112,10 +108,9 @@ Partial Class busReceipt
         Me.FullnameLabel.BackColor = System.Drawing.Color.Transparent
         Me.FullnameLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FullnameLabel.ForeColor = System.Drawing.Color.White
-        Me.FullnameLabel.Location = New System.Drawing.Point(237, 209)
-        Me.FullnameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.FullnameLabel.Location = New System.Drawing.Point(178, 170)
         Me.FullnameLabel.Name = "FullnameLabel"
-        Me.FullnameLabel.Size = New System.Drawing.Size(73, 18)
+        Me.FullnameLabel.Size = New System.Drawing.Size(58, 14)
         Me.FullnameLabel.TabIndex = 48
         Me.FullnameLabel.Text = "Bus Name:"
         '
@@ -125,10 +120,9 @@ Partial Class busReceipt
         Me.SeatLabel.BackColor = System.Drawing.Color.Transparent
         Me.SeatLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SeatLabel.ForeColor = System.Drawing.Color.White
-        Me.SeatLabel.Location = New System.Drawing.Point(237, 175)
-        Me.SeatLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.SeatLabel.Location = New System.Drawing.Point(178, 142)
         Me.SeatLabel.Name = "SeatLabel"
-        Me.SeatLabel.Size = New System.Drawing.Size(73, 18)
+        Me.SeatLabel.Size = New System.Drawing.Size(58, 14)
         Me.SeatLabel.TabIndex = 47
         Me.SeatLabel.Text = "Bus Name:"
         '
@@ -138,10 +132,9 @@ Partial Class busReceipt
         Me.DepartureLabel.BackColor = System.Drawing.Color.Transparent
         Me.DepartureLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DepartureLabel.ForeColor = System.Drawing.Color.White
-        Me.DepartureLabel.Location = New System.Drawing.Point(237, 143)
-        Me.DepartureLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.DepartureLabel.Location = New System.Drawing.Point(178, 116)
         Me.DepartureLabel.Name = "DepartureLabel"
-        Me.DepartureLabel.Size = New System.Drawing.Size(73, 18)
+        Me.DepartureLabel.Size = New System.Drawing.Size(58, 14)
         Me.DepartureLabel.TabIndex = 46
         Me.DepartureLabel.Text = "Bus Name:"
         '
@@ -151,10 +144,9 @@ Partial Class busReceipt
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(1453, 350)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(1090, 284)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(73, 18)
+        Me.Label9.Size = New System.Drawing.Size(58, 14)
         Me.Label9.TabIndex = 45
         Me.Label9.Text = "Bus Name:"
         '
@@ -164,10 +156,9 @@ Partial Class busReceipt
         Me.DestinationLabel.BackColor = System.Drawing.Color.Transparent
         Me.DestinationLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DestinationLabel.ForeColor = System.Drawing.Color.White
-        Me.DestinationLabel.Location = New System.Drawing.Point(237, 111)
-        Me.DestinationLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.DestinationLabel.Location = New System.Drawing.Point(178, 90)
         Me.DestinationLabel.Name = "DestinationLabel"
-        Me.DestinationLabel.Size = New System.Drawing.Size(73, 18)
+        Me.DestinationLabel.Size = New System.Drawing.Size(58, 14)
         Me.DestinationLabel.TabIndex = 44
         Me.DestinationLabel.Text = "Bus Name:"
         '
@@ -177,10 +168,9 @@ Partial Class busReceipt
         Me.CurrentPlaceLabel.BackColor = System.Drawing.Color.Transparent
         Me.CurrentPlaceLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CurrentPlaceLabel.ForeColor = System.Drawing.Color.White
-        Me.CurrentPlaceLabel.Location = New System.Drawing.Point(237, 79)
-        Me.CurrentPlaceLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.CurrentPlaceLabel.Location = New System.Drawing.Point(178, 64)
         Me.CurrentPlaceLabel.Name = "CurrentPlaceLabel"
-        Me.CurrentPlaceLabel.Size = New System.Drawing.Size(40, 18)
+        Me.CurrentPlaceLabel.Size = New System.Drawing.Size(33, 14)
         Me.CurrentPlaceLabel.TabIndex = 43
         Me.CurrentPlaceLabel.Text = "Label"
         '
@@ -190,10 +180,9 @@ Partial Class busReceipt
         Me.BusNameLabel.BackColor = System.Drawing.Color.Transparent
         Me.BusNameLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BusNameLabel.ForeColor = System.Drawing.Color.White
-        Me.BusNameLabel.Location = New System.Drawing.Point(237, 47)
-        Me.BusNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.BusNameLabel.Location = New System.Drawing.Point(178, 38)
         Me.BusNameLabel.Name = "BusNameLabel"
-        Me.BusNameLabel.Size = New System.Drawing.Size(73, 18)
+        Me.BusNameLabel.Size = New System.Drawing.Size(58, 14)
         Me.BusNameLabel.TabIndex = 42
         Me.BusNameLabel.Text = "Bus Name:"
         '
@@ -203,10 +192,9 @@ Partial Class busReceipt
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(48, 273)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(36, 222)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 18)
+        Me.Label8.Size = New System.Drawing.Size(36, 14)
         Me.Label8.TabIndex = 39
         Me.Label8.Text = "Email:"
         '
@@ -216,10 +204,9 @@ Partial Class busReceipt
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(48, 175)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(36, 142)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 18)
+        Me.Label5.Size = New System.Drawing.Size(31, 14)
         Me.Label5.TabIndex = 41
         Me.Label5.Text = "Seat:"
         '
@@ -229,10 +216,9 @@ Partial Class busReceipt
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(48, 241)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(36, 196)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(104, 18)
+        Me.Label7.Size = New System.Drawing.Size(81, 14)
         Me.Label7.TabIndex = 38
         Me.Label7.Text = "Phone Number:"
         '
@@ -242,10 +228,9 @@ Partial Class busReceipt
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(48, 209)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(36, 170)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(72, 18)
+        Me.Label6.Size = New System.Drawing.Size(58, 14)
         Me.Label6.TabIndex = 37
         Me.Label6.Text = "Full Name:"
         '
@@ -255,10 +240,9 @@ Partial Class busReceipt
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(48, 79)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(36, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 18)
+        Me.Label1.Size = New System.Drawing.Size(75, 14)
         Me.Label1.TabIndex = 38
         Me.Label1.Text = "Current Place:"
         '
@@ -268,10 +252,9 @@ Partial Class busReceipt
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(48, 143)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(36, 116)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 18)
+        Me.Label3.Size = New System.Drawing.Size(86, 14)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = "Departure Time:"
         '
@@ -281,10 +264,9 @@ Partial Class busReceipt
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(48, 47)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(36, 38)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 18)
+        Me.Label4.Size = New System.Drawing.Size(58, 14)
         Me.Label4.TabIndex = 37
         Me.Label4.Text = "Bus Name:"
         '
@@ -294,10 +276,9 @@ Partial Class busReceipt
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(48, 111)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(36, 90)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(116, 18)
+        Me.Label2.Size = New System.Drawing.Size(95, 14)
         Me.Label2.TabIndex = 39
         Me.Label2.Text = "Destination Place:"
         '
@@ -305,10 +286,9 @@ Partial Class busReceipt
         '
         Me.HomeButton.BackColor = System.Drawing.Color.White
         Me.HomeButton.ForeColor = System.Drawing.Color.Black
-        Me.HomeButton.Location = New System.Drawing.Point(812, 486)
-        Me.HomeButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HomeButton.Location = New System.Drawing.Point(609, 395)
         Me.HomeButton.Name = "HomeButton"
-        Me.HomeButton.Size = New System.Drawing.Size(129, 53)
+        Me.HomeButton.Size = New System.Drawing.Size(97, 43)
         Me.HomeButton.TabIndex = 35
         Me.HomeButton.Text = "Home"
         Me.HomeButton.UseVisualStyleBackColor = False
@@ -317,10 +297,9 @@ Partial Class busReceipt
         '
         Me.PrintButton.BackColor = System.Drawing.Color.White
         Me.PrintButton.ForeColor = System.Drawing.Color.Black
-        Me.PrintButton.Location = New System.Drawing.Point(661, 486)
-        Me.PrintButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PrintButton.Location = New System.Drawing.Point(496, 395)
         Me.PrintButton.Name = "PrintButton"
-        Me.PrintButton.Size = New System.Drawing.Size(129, 53)
+        Me.PrintButton.Size = New System.Drawing.Size(97, 43)
         Me.PrintButton.TabIndex = 36
         Me.PrintButton.Text = "Print Ticket"
         Me.PrintButton.UseVisualStyleBackColor = False
@@ -344,16 +323,15 @@ Partial Class busReceipt
         '
         'busReceipt
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.testing.My.Resources.Resources.bgbusgo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ReceiptGroupBox)
         Me.Controls.Add(Me.PrintButton)
         Me.Controls.Add(Me.HomeButton)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "busReceipt"
         Me.Text = "BusGo | Bus Receipt"
         Me.ReceiptGroupBox.ResumeLayout(False)

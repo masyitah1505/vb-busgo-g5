@@ -40,10 +40,14 @@ C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.vbproj.Co
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.exe
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.xml
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.pdb
-C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.busAvailibility.resources
 C:\Users\Malavika\Desktop\VB.NET\A.PROJECT\vb-busgo-g5\testing\obj\Debug\testing.WelcomePage.resources
 C:\Users\Malavika\Desktop\VB.NET\A.PROJECT\vb-busgo-g5\testing\obj\Debug\testing.busAvailability.resources
 C:\Users\Malavika\Desktop\VB.NET\A.PROJECT\vb-busgo-g5\testing\obj\Debug\testing.busReceipt.resources
 C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.busAvailability.resources
 C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.busReceipt.resources
 C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.WelcomePage.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.busAvailability.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.busLegend.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.busReceipt.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.designDashboard.resources
+C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.WelcomePage.resources

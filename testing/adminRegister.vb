@@ -51,6 +51,6 @@ Public Class adminRegister
 
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
         Me.Hide()
-        adminHomepage.BringToFront()
+        adminHomepage.Show()
     End Sub
 End Class
