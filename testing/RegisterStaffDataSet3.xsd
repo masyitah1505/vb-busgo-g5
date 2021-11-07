@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="RegisterStaffDataSet" targetNamespace="http://tempuri.org/RegisterStaffDataSet.xsd" xmlns:mstns="http://tempuri.org/RegisterStaffDataSet.xsd" xmlns="http://tempuri.org/RegisterStaffDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="RegisterStaffDataSet3" targetNamespace="http://tempuri.org/RegisterStaffDataSet3.xsd" xmlns:mstns="http://tempuri.org/RegisterStaffDataSet3.xsd" xmlns="http://tempuri.org/RegisterStaffDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RegisterStaffConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RegisterStaffConnectionString2 (MySettings)" PropertyReference="ApplicationSettings.testing.My.MySettings.GlobalReference.Default.RegisterStaffConnectionString2" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RegisterStaffConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RegisterStaffConnectionString (MySettings)" PropertyReference="ApplicationSettings.testing.My.MySettings.GlobalReference.Default.RegisterStaffConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BusAndPassengersTableAdapter" GeneratorDataComponentClassName="BusAndPassengersTableAdapter" Name="BusAndPassengers" UserDataComponentName="BusAndPassengersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="RegisterStaffConnectionString2 (MySettings)" DbObjectName="BusAndPassengers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="RegisterStaffConnectionString (MySettings)" DbObjectName="BusAndPassengers" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `BusAndPassengers` WHERE ((`ID` = ?) AND ((? = 1 AND `DepartureTime` IS NULL) OR (`DepartureTime` = ?)) AND ((? = 1 AND `SeatNo` IS NULL) OR (`SeatNo` = ?)) AND ((? = 1 AND `Seat` IS NULL) OR (`Seat` = ?)) AND ((? = 1 AND `PhoneNumber` IS NULL) OR (`PhoneNumber` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)))</CommandText>
@@ -93,93 +93,12 @@
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RegisterStaffTableAdapter" GeneratorDataComponentClassName="RegisterStaffTableAdapter" Name="RegisterStaff" UserDataComponentName="RegisterStaffTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="RegisterStaffConnectionString2 (MySettings)" DbObjectName="RegisterStaff" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `RegisterStaff` WHERE ((`ID` = ?) AND ((? = 1 AND `Username` IS NULL) OR (`Username` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `FullName` IS NULL) OR (`FullName` = ?)) AND ((? = 1 AND `StaffNo` IS NULL) OR (`StaffNo` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `PhoneNo` IS NULL) OR (`PhoneNo` = ?)))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Username" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Username" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Username" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Username" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Password" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Password" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_FullName" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="FullName" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_FullName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="FullName" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_StaffNo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="StaffNo" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_StaffNo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="StaffNo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Email" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Email" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_PhoneNo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="PhoneNo" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_PhoneNo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="PhoneNo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO `RegisterStaff` (`Username`, `Password`, `FullName`, `StaffNo`, `Email`, `PhoneNo`) VALUES (?, ?, ?, ?, ?, ?)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Username" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Username" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Password" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="FullName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="FullName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="StaffNo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="StaffNo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Email" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="PhoneNo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="PhoneNo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, Username, [Password], FullName, StaffNo, Email, PhoneNo FROM RegisterStaff</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `RegisterStaff` SET `Username` = ?, `Password` = ?, `FullName` = ?, `StaffNo` = ?, `Email` = ?, `PhoneNo` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Username` IS NULL) OR (`Username` = ?)) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `FullName` IS NULL) OR (`FullName` = ?)) AND ((? = 1 AND `StaffNo` IS NULL) OR (`StaffNo` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `PhoneNo` IS NULL) OR (`PhoneNo` = ?)))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Username" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Username" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Password" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="FullName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="FullName" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="StaffNo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="StaffNo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Email" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="PhoneNo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="PhoneNo" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="Original_ID" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Username" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Username" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Username" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Username" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Password" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Password" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_FullName" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="FullName" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_FullName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="FullName" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_StaffNo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="StaffNo" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_StaffNo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="StaffNo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_Email" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_Email" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_PhoneNo" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="PhoneNo" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_PhoneNo" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="PhoneNo" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="ID" DataSetColumn="ID" />
-              <Mapping SourceColumn="Username" DataSetColumn="Username" />
-              <Mapping SourceColumn="Password" DataSetColumn="Password" />
-              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
-              <Mapping SourceColumn="StaffNo" DataSetColumn="StaffNo" />
-              <Mapping SourceColumn="Email" DataSetColumn="Email" />
-              <Mapping SourceColumn="PhoneNo" DataSetColumn="PhoneNo" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="RegisterStaffDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="RegisterStaffDataSet" msprop:Generator_UserDSName="RegisterStaffDataSet">
+  <xs:element name="RegisterStaffDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="RegisterStaffDataSet3" msprop:Generator_UserDSName="RegisterStaffDataSet3">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="BusAndPassengers" msprop:Generator_TableClassName="BusAndPassengersDataTable" msprop:Generator_TableVarName="tableBusAndPassengers" msprop:Generator_TablePropName="BusAndPassengers" msprop:Generator_RowDeletingName="BusAndPassengersRowDeleting" msprop:Generator_RowChangingName="BusAndPassengersRowChanging" msprop:Generator_RowEvHandlerName="BusAndPassengersRowChangeEventHandler" msprop:Generator_RowDeletedName="BusAndPassengersRowDeleted" msprop:Generator_UserTableName="BusAndPassengers" msprop:Generator_RowChangedName="BusAndPassengersRowChanged" msprop:Generator_RowEvArgName="BusAndPassengersRowChangeEvent" msprop:Generator_RowClassName="BusAndPassengersRow">
@@ -246,63 +165,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RegisterStaff" msprop:Generator_TableClassName="RegisterStaffDataTable" msprop:Generator_TableVarName="tableRegisterStaff" msprop:Generator_TablePropName="RegisterStaff" msprop:Generator_RowDeletingName="RegisterStaffRowDeleting" msprop:Generator_RowChangingName="RegisterStaffRowChanging" msprop:Generator_RowEvHandlerName="RegisterStaffRowChangeEventHandler" msprop:Generator_RowDeletedName="RegisterStaffRowDeleted" msprop:Generator_UserTableName="RegisterStaff" msprop:Generator_RowChangedName="RegisterStaffRowChanged" msprop:Generator_RowEvArgName="RegisterStaffRowChangeEvent" msprop:Generator_RowClassName="RegisterStaffRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="Username" msprop:Generator_ColumnVarNameInTable="columnUsername" msprop:Generator_ColumnPropNameInRow="Username" msprop:Generator_ColumnPropNameInTable="UsernameColumn" msprop:Generator_UserColumnName="Username" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="StaffNo" msprop:Generator_ColumnVarNameInTable="columnStaffNo" msprop:Generator_ColumnPropNameInRow="StaffNo" msprop:Generator_ColumnPropNameInTable="StaffNoColumn" msprop:Generator_UserColumnName="StaffNo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="PhoneNo" msprop:Generator_ColumnVarNameInTable="columnPhoneNo" msprop:Generator_ColumnPropNameInRow="PhoneNo" msprop:Generator_ColumnPropNameInTable="PhoneNoColumn" msprop:Generator_UserColumnName="PhoneNo" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:BusAndPassengers" />
-      <xs:field xpath="mstns:ID" />
-    </xs:unique>
-    <xs:unique name="RegisterStaff_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:RegisterStaff" />
       <xs:field xpath="mstns:ID" />
     </xs:unique>
   </xs:element>

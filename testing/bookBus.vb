@@ -9,6 +9,12 @@ Public Class bookBus
         departuretime,
         destination As String
 
+    Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
+        Me.Close()
+        busAvailability.Show()
+    End Sub
+
+
     'passengers details
     Dim fullname,
             phonenumber,
@@ -146,15 +152,15 @@ Public Class bookBus
 
     Public Sub ViewTicketButton_Click(sender As Object, e As EventArgs) Handles ViewTicketButton.Click
         Me.Hide()
-        busAvailibility.Show()
-        busAvailibility.BusNameLabel.Text = busname
-        busAvailibility.CurrentPlaceLabel.Text = currentplace
-        busAvailibility.DestinationLabel.Text = destination
-        busAvailibility.DepartureLabel.Text = departuretime
-        busAvailibility.SeatLabel.Text = seatNo
-        busAvailibility.SeatLabel.Text = seat
-        busAvailibility.FullnameLabel.Text = fullname
-        busAvailibility.PhoneNoLabel.Text = phonenumber
-        busAvailibility.EmailLabel.Text = email
+        busReceipt.ShowDialog()
+        busReceipt.BusNameLabel.Text = busname
+        busReceipt.CurrentPlaceLabel.Text = currentplace
+        busReceipt.DestinationLabel.Text = destination
+        busReceipt.DepartureLabel.Text = departuretime
+        busReceipt.SeatLabel.Text = seatNo
+        busReceipt.SeatLabel.Text = seat
+        busReceipt.FullnameLabel.Text = fullname
+        busReceipt.PhoneNoLabel.Text = phonenumber
+        busReceipt.EmailLabel.Text = email
     End Sub
 End Class

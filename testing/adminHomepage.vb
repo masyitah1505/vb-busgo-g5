@@ -18,7 +18,7 @@ Public Class adminHomepage
             Dim logincount = Convert.ToInt32(LOGIN.ExecuteScalar())
             If logincount > 0 Then
                 Me.Hide()
-                bookBus.Show()
+                bookBus.ShowDialog()
             Else
                 MessageBox.Show("Invalid Credentials!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 UsernameTextBox.Clear()
@@ -31,4 +31,5 @@ Public Class adminHomepage
     Private Sub RegisterLabel_Click(sender As Object, e As EventArgs) Handles RegisterLabel.Click
         adminRegister.Show()
     End Sub
+
 End Class

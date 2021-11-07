@@ -1,6 +1,6 @@
 ﻿Imports System.Drawing.Printing
 
-Public Class busAvailibility
+Public Class busReceipt
     Private Sub HomeButton_Click(sender As Object, e As EventArgs) Handles HomeButton.Click
         Me.Hide()
         adminHomepage.Show()

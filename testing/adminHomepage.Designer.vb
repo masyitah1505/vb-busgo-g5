@@ -79,7 +79,7 @@ Partial Class adminHomepage
         Me.RegisterLabel.BackColor = System.Drawing.Color.Transparent
         Me.RegisterLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RegisterLabel.ForeColor = System.Drawing.Color.White
-        Me.RegisterLabel.Location = New System.Drawing.Point(451, 452)
+        Me.RegisterLabel.Location = New System.Drawing.Point(451, 477)
         Me.RegisterLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.RegisterLabel.Name = "RegisterLabel"
         Me.RegisterLabel.Size = New System.Drawing.Size(205, 18)
@@ -92,7 +92,7 @@ Partial Class adminHomepage
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(385, 337)
+        Me.Label4.Location = New System.Drawing.Point(385, 341)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(69, 18)
@@ -101,7 +101,7 @@ Partial Class adminHomepage
         '
         'PasswordTextBox
         '
-        Me.PasswordTextBox.Location = New System.Drawing.Point(471, 334)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(471, 337)
         Me.PasswordTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -110,7 +110,7 @@ Partial Class adminHomepage
         '
         'UsernameTextBox
         '
-        Me.UsernameTextBox.Location = New System.Drawing.Point(471, 289)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(471, 274)
         Me.UsernameTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(173, 22)
@@ -122,7 +122,7 @@ Partial Class adminHomepage
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(385, 293)
+        Me.Label1.Location = New System.Drawing.Point(385, 278)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 18)
@@ -132,7 +132,7 @@ Partial Class adminHomepage
         'LoginButton
         '
         Me.LoginButton.BackColor = System.Drawing.Color.White
-        Me.LoginButton.Location = New System.Drawing.Point(493, 379)
+        Me.LoginButton.Location = New System.Drawing.Point(495, 404)
         Me.LoginButton.Margin = New System.Windows.Forms.Padding(4)
         Me.LoginButton.Name = "LoginButton"
         Me.LoginButton.Size = New System.Drawing.Size(129, 53)
