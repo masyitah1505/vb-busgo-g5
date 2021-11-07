@@ -42,17 +42,7 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:testing.RegisterStaffDataSet.RegisterStaffDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:testing.RegisterStaffDataSet.BusAndPassengersRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:testing.RegisterStaffDataSet.RegisterStaffRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -62,17 +52,7 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
-<member name="T:testing.RegisterStaffDataSet.RegisterStaffRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:testing.RegisterStaffDataSetTableAdapters.BusAndPassengersTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:testing.RegisterStaffDataSetTableAdapters.RegisterStaffTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

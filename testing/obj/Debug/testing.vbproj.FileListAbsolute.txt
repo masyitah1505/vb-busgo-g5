@@ -44,3 +44,6 @@ C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.busAvaili
 C:\Users\Malavika\Desktop\VB.NET\A.PROJECT\vb-busgo-g5\testing\obj\Debug\testing.WelcomePage.resources
 C:\Users\Malavika\Desktop\VB.NET\A.PROJECT\vb-busgo-g5\testing\obj\Debug\testing.busAvailability.resources
 C:\Users\Malavika\Desktop\VB.NET\A.PROJECT\vb-busgo-g5\testing\obj\Debug\testing.busReceipt.resources
+C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.busAvailability.resources
+C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.busReceipt.resources
+C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.WelcomePage.resources

@@ -7,6 +7,7 @@
     End Sub
 
     Private Sub busAvailability_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         'TODO: This line of code loads data into the 'RegisterStaffDataSet.BusAndPassengers' table. You can move, or remove it, as needed.
         Me.BusAndPassengersTableAdapter.Fill(Me.RegisterStaffDataSet.BusAndPassengers)
 
@@ -41,6 +42,13 @@ SaveErr:
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
+
+    Private Sub BusAndPassengersBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs) Handles BusAndPassengersBindingNavigatorSaveItem.Click
+        Me.Validate()
+        Me.BusAndPassengersBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.RegisterStaffDataSet)
 
     End Sub
 End Class

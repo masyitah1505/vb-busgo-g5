@@ -120,10 +120,22 @@
     <Compile Include="busAvailability.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="busLegend.Designer.vb">
+      <DependentUpon>busLegend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="busLegend.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="busReceipt.Designer.vb">
       <DependentUpon>busReceipt.vb</DependentUpon>
     </Compile>
     <Compile Include="busReceipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="designDashboard.Designer.vb">
+      <DependentUpon>designDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="designDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -141,6 +153,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RegisterStaffDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterStaffDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="WelcomePage.Designer.vb">
       <DependentUpon>WelcomePage.vb</DependentUpon>
@@ -162,8 +179,14 @@
     <EmbeddedResource Include="busAvailability.resx">
       <DependentUpon>busAvailability.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="busLegend.resx">
+      <DependentUpon>busLegend.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="busReceipt.resx">
       <DependentUpon>busReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="designDashboard.resx">
+      <DependentUpon>designDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -188,10 +211,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="RegisterStaffDataSet.xsc">
+      <DependentUpon>RegisterStaffDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RegisterStaffDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegisterStaffDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegisterStaffDataSet.xss">
+      <DependentUpon>RegisterStaffDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\bgbusgo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bgbusgo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\busLegend.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
