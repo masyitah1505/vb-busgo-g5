@@ -51,3 +51,8 @@ C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.busLegend
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.busReceipt.resources
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.designDashboard.resources
 C:\Users\User\Desktop\GROUP 5 VB\vb-busgo-g5\testing\obj\Debug\testing.WelcomePage.resources
+C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.busLegend.resources
+C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.designDashboard.resources
+C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\alian\Desktop\ALIA\UTM\SEM 5\VB NET PROGRAMMING\vb-busgo-g5\testing\obj\Debug\testing.vbproj.CopyComplete

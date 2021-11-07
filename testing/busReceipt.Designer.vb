@@ -22,17 +22,18 @@ Partial Class busReceipt
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(busReceipt))
         Me.ReceiptGroupBox = New System.Windows.Forms.GroupBox()
         Me.EmailLabel = New System.Windows.Forms.Label()
-        Me.PhoneNoLabel = New System.Windows.Forms.Label()
         Me.FullnameLabel = New System.Windows.Forms.Label()
+        Me.PhoneNoLabel = New System.Windows.Forms.Label()
         Me.SeatLabel = New System.Windows.Forms.Label()
         Me.DepartureLabel = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.DestinationLabel = New System.Windows.Forms.Label()
         Me.CurrentPlaceLabel = New System.Windows.Forms.Label()
         Me.BusNameLabel = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,10 +43,9 @@ Partial Class busReceipt
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.HomeButton = New System.Windows.Forms.Button()
-        Me.PrintButton = New System.Windows.Forms.Button()
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.printButton = New System.Windows.Forms.Button()
+        Me.backHomepageButton = New System.Windows.Forms.Button()
+        Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me.components)
         Me.ReceiptGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,14 +54,14 @@ Partial Class busReceipt
         Me.ReceiptGroupBox.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.ReceiptGroupBox.BackgroundImage = Global.testing.My.Resources.Resources.bgbusgo1
         Me.ReceiptGroupBox.Controls.Add(Me.EmailLabel)
-        Me.ReceiptGroupBox.Controls.Add(Me.PhoneNoLabel)
         Me.ReceiptGroupBox.Controls.Add(Me.FullnameLabel)
+        Me.ReceiptGroupBox.Controls.Add(Me.PhoneNoLabel)
         Me.ReceiptGroupBox.Controls.Add(Me.SeatLabel)
         Me.ReceiptGroupBox.Controls.Add(Me.DepartureLabel)
-        Me.ReceiptGroupBox.Controls.Add(Me.Label9)
         Me.ReceiptGroupBox.Controls.Add(Me.DestinationLabel)
         Me.ReceiptGroupBox.Controls.Add(Me.CurrentPlaceLabel)
         Me.ReceiptGroupBox.Controls.Add(Me.BusNameLabel)
+        Me.ReceiptGroupBox.Controls.Add(Me.Label9)
         Me.ReceiptGroupBox.Controls.Add(Me.Label8)
         Me.ReceiptGroupBox.Controls.Add(Me.Label5)
         Me.ReceiptGroupBox.Controls.Add(Me.Label7)
@@ -82,61 +82,81 @@ Partial Class busReceipt
         '
         Me.EmailLabel.AutoSize = True
         Me.EmailLabel.BackColor = System.Drawing.Color.Transparent
-        Me.EmailLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EmailLabel.ForeColor = System.Drawing.Color.White
-        Me.EmailLabel.Location = New System.Drawing.Point(178, 222)
+        Me.EmailLabel.Location = New System.Drawing.Point(201, 222)
         Me.EmailLabel.Name = "EmailLabel"
-        Me.EmailLabel.Size = New System.Drawing.Size(58, 14)
-        Me.EmailLabel.TabIndex = 50
-        Me.EmailLabel.Text = "Bus Name:"
-        '
-        'PhoneNoLabel
-        '
-        Me.PhoneNoLabel.AutoSize = True
-        Me.PhoneNoLabel.BackColor = System.Drawing.Color.Transparent
-        Me.PhoneNoLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PhoneNoLabel.ForeColor = System.Drawing.Color.White
-        Me.PhoneNoLabel.Location = New System.Drawing.Point(178, 196)
-        Me.PhoneNoLabel.Name = "PhoneNoLabel"
-        Me.PhoneNoLabel.Size = New System.Drawing.Size(58, 14)
-        Me.PhoneNoLabel.TabIndex = 49
-        Me.PhoneNoLabel.Text = "Bus Name:"
+        Me.EmailLabel.Size = New System.Drawing.Size(27, 13)
+        Me.EmailLabel.TabIndex = 52
+        Me.EmailLabel.Text = "N/A"
         '
         'FullnameLabel
         '
         Me.FullnameLabel.AutoSize = True
         Me.FullnameLabel.BackColor = System.Drawing.Color.Transparent
-        Me.FullnameLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FullnameLabel.ForeColor = System.Drawing.Color.White
-        Me.FullnameLabel.Location = New System.Drawing.Point(178, 170)
+        Me.FullnameLabel.Location = New System.Drawing.Point(201, 170)
         Me.FullnameLabel.Name = "FullnameLabel"
-        Me.FullnameLabel.Size = New System.Drawing.Size(58, 14)
-        Me.FullnameLabel.TabIndex = 48
-        Me.FullnameLabel.Text = "Bus Name:"
+        Me.FullnameLabel.Size = New System.Drawing.Size(27, 13)
+        Me.FullnameLabel.TabIndex = 51
+        Me.FullnameLabel.Text = "N/A"
+        '
+        'PhoneNoLabel
+        '
+        Me.PhoneNoLabel.AutoSize = True
+        Me.PhoneNoLabel.BackColor = System.Drawing.Color.Transparent
+        Me.PhoneNoLabel.Location = New System.Drawing.Point(201, 196)
+        Me.PhoneNoLabel.Name = "PhoneNoLabel"
+        Me.PhoneNoLabel.Size = New System.Drawing.Size(27, 13)
+        Me.PhoneNoLabel.TabIndex = 51
+        Me.PhoneNoLabel.Text = "N/A"
         '
         'SeatLabel
         '
         Me.SeatLabel.AutoSize = True
         Me.SeatLabel.BackColor = System.Drawing.Color.Transparent
-        Me.SeatLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SeatLabel.ForeColor = System.Drawing.Color.White
-        Me.SeatLabel.Location = New System.Drawing.Point(178, 142)
+        Me.SeatLabel.Location = New System.Drawing.Point(201, 142)
         Me.SeatLabel.Name = "SeatLabel"
-        Me.SeatLabel.Size = New System.Drawing.Size(58, 14)
-        Me.SeatLabel.TabIndex = 47
-        Me.SeatLabel.Text = "Bus Name:"
+        Me.SeatLabel.Size = New System.Drawing.Size(27, 13)
+        Me.SeatLabel.TabIndex = 50
+        Me.SeatLabel.Text = "N/A"
         '
         'DepartureLabel
         '
         Me.DepartureLabel.AutoSize = True
         Me.DepartureLabel.BackColor = System.Drawing.Color.Transparent
-        Me.DepartureLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DepartureLabel.ForeColor = System.Drawing.Color.White
-        Me.DepartureLabel.Location = New System.Drawing.Point(178, 116)
+        Me.DepartureLabel.Location = New System.Drawing.Point(201, 117)
         Me.DepartureLabel.Name = "DepartureLabel"
-        Me.DepartureLabel.Size = New System.Drawing.Size(58, 14)
-        Me.DepartureLabel.TabIndex = 46
-        Me.DepartureLabel.Text = "Bus Name:"
+        Me.DepartureLabel.Size = New System.Drawing.Size(27, 13)
+        Me.DepartureLabel.TabIndex = 49
+        Me.DepartureLabel.Text = "N/A"
+        '
+        'DestinationLabel
+        '
+        Me.DestinationLabel.AutoSize = True
+        Me.DestinationLabel.BackColor = System.Drawing.Color.Transparent
+        Me.DestinationLabel.Location = New System.Drawing.Point(201, 91)
+        Me.DestinationLabel.Name = "DestinationLabel"
+        Me.DestinationLabel.Size = New System.Drawing.Size(27, 13)
+        Me.DestinationLabel.TabIndex = 48
+        Me.DestinationLabel.Text = "N/A"
+        '
+        'CurrentPlaceLabel
+        '
+        Me.CurrentPlaceLabel.AutoSize = True
+        Me.CurrentPlaceLabel.BackColor = System.Drawing.Color.Transparent
+        Me.CurrentPlaceLabel.Location = New System.Drawing.Point(201, 64)
+        Me.CurrentPlaceLabel.Name = "CurrentPlaceLabel"
+        Me.CurrentPlaceLabel.Size = New System.Drawing.Size(27, 13)
+        Me.CurrentPlaceLabel.TabIndex = 47
+        Me.CurrentPlaceLabel.Text = "N/A"
+        '
+        'BusNameLabel
+        '
+        Me.BusNameLabel.AutoSize = True
+        Me.BusNameLabel.BackColor = System.Drawing.Color.Transparent
+        Me.BusNameLabel.Location = New System.Drawing.Point(201, 38)
+        Me.BusNameLabel.Name = "BusNameLabel"
+        Me.BusNameLabel.Size = New System.Drawing.Size(27, 13)
+        Me.BusNameLabel.TabIndex = 46
+        Me.BusNameLabel.Text = "N/A"
         '
         'Label9
         '
@@ -149,42 +169,6 @@ Partial Class busReceipt
         Me.Label9.Size = New System.Drawing.Size(58, 14)
         Me.Label9.TabIndex = 45
         Me.Label9.Text = "Bus Name:"
-        '
-        'DestinationLabel
-        '
-        Me.DestinationLabel.AutoSize = True
-        Me.DestinationLabel.BackColor = System.Drawing.Color.Transparent
-        Me.DestinationLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DestinationLabel.ForeColor = System.Drawing.Color.White
-        Me.DestinationLabel.Location = New System.Drawing.Point(178, 90)
-        Me.DestinationLabel.Name = "DestinationLabel"
-        Me.DestinationLabel.Size = New System.Drawing.Size(58, 14)
-        Me.DestinationLabel.TabIndex = 44
-        Me.DestinationLabel.Text = "Bus Name:"
-        '
-        'CurrentPlaceLabel
-        '
-        Me.CurrentPlaceLabel.AutoSize = True
-        Me.CurrentPlaceLabel.BackColor = System.Drawing.Color.Transparent
-        Me.CurrentPlaceLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CurrentPlaceLabel.ForeColor = System.Drawing.Color.White
-        Me.CurrentPlaceLabel.Location = New System.Drawing.Point(178, 64)
-        Me.CurrentPlaceLabel.Name = "CurrentPlaceLabel"
-        Me.CurrentPlaceLabel.Size = New System.Drawing.Size(33, 14)
-        Me.CurrentPlaceLabel.TabIndex = 43
-        Me.CurrentPlaceLabel.Text = "Label"
-        '
-        'BusNameLabel
-        '
-        Me.BusNameLabel.AutoSize = True
-        Me.BusNameLabel.BackColor = System.Drawing.Color.Transparent
-        Me.BusNameLabel.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BusNameLabel.ForeColor = System.Drawing.Color.White
-        Me.BusNameLabel.Location = New System.Drawing.Point(178, 38)
-        Me.BusNameLabel.Name = "BusNameLabel"
-        Me.BusNameLabel.Size = New System.Drawing.Size(58, 14)
-        Me.BusNameLabel.TabIndex = 42
-        Me.BusNameLabel.Text = "Bus Name:"
         '
         'Label8
         '
@@ -286,40 +270,40 @@ Partial Class busReceipt
         '
         Me.HomeButton.BackColor = System.Drawing.Color.White
         Me.HomeButton.ForeColor = System.Drawing.Color.Black
-        Me.HomeButton.Location = New System.Drawing.Point(609, 395)
+        Me.HomeButton.Location = New System.Drawing.Point(459, 395)
         Me.HomeButton.Name = "HomeButton"
-        Me.HomeButton.Size = New System.Drawing.Size(97, 43)
+        Me.HomeButton.Size = New System.Drawing.Size(197, 43)
         Me.HomeButton.TabIndex = 35
-        Me.HomeButton.Text = "Home"
+        Me.HomeButton.Text = "CLICK HERE TO INSERT CUTOMER DATA IN THE RECEIPT"
         Me.HomeButton.UseVisualStyleBackColor = False
         '
-        'PrintButton
+        'printButton
         '
-        Me.PrintButton.BackColor = System.Drawing.Color.White
-        Me.PrintButton.ForeColor = System.Drawing.Color.Black
-        Me.PrintButton.Location = New System.Drawing.Point(496, 395)
-        Me.PrintButton.Name = "PrintButton"
-        Me.PrintButton.Size = New System.Drawing.Size(97, 43)
-        Me.PrintButton.TabIndex = 36
-        Me.PrintButton.Text = "Print Ticket"
-        Me.PrintButton.UseVisualStyleBackColor = False
+        Me.printButton.BackColor = System.Drawing.Color.White
+        Me.printButton.ForeColor = System.Drawing.Color.Black
+        Me.printButton.Location = New System.Drawing.Point(356, 395)
+        Me.printButton.Name = "printButton"
+        Me.printButton.Size = New System.Drawing.Size(97, 43)
+        Me.printButton.TabIndex = 36
+        Me.printButton.Text = "PRINT TICKET"
+        Me.printButton.UseVisualStyleBackColor = False
         '
-        'PrintDocument1
+        'backHomepageButton
         '
+        Me.backHomepageButton.Location = New System.Drawing.Point(662, 395)
+        Me.backHomepageButton.Name = "backHomepageButton"
+        Me.backHomepageButton.Size = New System.Drawing.Size(97, 43)
+        Me.backHomepageButton.TabIndex = 37
+        Me.backHomepageButton.Text = "END"
+        Me.backHomepageButton.UseVisualStyleBackColor = True
         '
-        'PrintDialog1
+        'PrintForm1
         '
-        Me.PrintDialog1.UseEXDialog = True
-        '
-        'PrintPreviewDialog1
-        '
-        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
-        Me.PrintPreviewDialog1.Enabled = True
-        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
-        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
-        Me.PrintPreviewDialog1.Visible = False
+        Me.PrintForm1.DocumentName = "document"
+        Me.PrintForm1.Form = Me
+        Me.PrintForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter
+        Me.PrintForm1.PrinterSettings = CType(resources.GetObject("PrintForm1.PrinterSettings"), System.Drawing.Printing.PrinterSettings)
+        Me.PrintForm1.PrintFileName = Nothing
         '
         'busReceipt
         '
@@ -328,8 +312,9 @@ Partial Class busReceipt
         Me.BackgroundImage = Global.testing.My.Resources.Resources.bgbusgo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.backHomepageButton)
         Me.Controls.Add(Me.ReceiptGroupBox)
-        Me.Controls.Add(Me.PrintButton)
+        Me.Controls.Add(Me.printButton)
         Me.Controls.Add(Me.HomeButton)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "busReceipt"
@@ -342,16 +327,8 @@ Partial Class busReceipt
 
     Friend WithEvents ReceiptGroupBox As GroupBox
     Friend WithEvents HomeButton As Button
-    Friend WithEvents PrintButton As Button
+    Friend WithEvents printButton As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents EmailLabel As Label
-    Friend WithEvents PhoneNoLabel As Label
-    Friend WithEvents FullnameLabel As Label
-    Friend WithEvents SeatLabel As Label
-    Friend WithEvents DepartureLabel As Label
-    Friend WithEvents DestinationLabel As Label
-    Friend WithEvents CurrentPlaceLabel As Label
-    Friend WithEvents BusNameLabel As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label7 As Label
@@ -360,7 +337,14 @@ Partial Class busReceipt
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PrintDocument1 As Printing.PrintDocument
-    Friend WithEvents PrintDialog1 As PrintDialog
-    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents EmailLabel As Label
+    Friend WithEvents FullnameLabel As Label
+    Friend WithEvents PhoneNoLabel As Label
+    Friend WithEvents SeatLabel As Label
+    Friend WithEvents DepartureLabel As Label
+    Friend WithEvents DestinationLabel As Label
+    Friend WithEvents CurrentPlaceLabel As Label
+    Friend WithEvents BusNameLabel As Label
+    Friend WithEvents backHomepageButton As Button
+    Friend WithEvents PrintForm1 As PowerPacks.Printing.PrintForm
 End Class

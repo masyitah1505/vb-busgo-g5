@@ -66,30 +66,27 @@ Partial Class bookBus
         '
         Me.PayButton.BackColor = System.Drawing.Color.White
         Me.PayButton.ForeColor = System.Drawing.Color.Black
-        Me.PayButton.Location = New System.Drawing.Point(189, 178)
-        Me.PayButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.PayButton.Location = New System.Drawing.Point(142, 145)
         Me.PayButton.Name = "PayButton"
-        Me.PayButton.Size = New System.Drawing.Size(129, 53)
+        Me.PayButton.Size = New System.Drawing.Size(97, 43)
         Me.PayButton.TabIndex = 24
         Me.PayButton.Text = "Pay"
         Me.PayButton.UseVisualStyleBackColor = False
         '
         'ChangeTextBox
         '
-        Me.ChangeTextBox.Location = New System.Drawing.Point(144, 255)
-        Me.ChangeTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.ChangeTextBox.Location = New System.Drawing.Point(108, 207)
         Me.ChangeTextBox.Name = "ChangeTextBox"
-        Me.ChangeTextBox.Size = New System.Drawing.Size(173, 22)
+        Me.ChangeTextBox.Size = New System.Drawing.Size(131, 20)
         Me.ChangeTextBox.TabIndex = 32
         '
         'BookButton
         '
         Me.BookButton.BackColor = System.Drawing.Color.White
         Me.BookButton.ForeColor = System.Drawing.Color.Black
-        Me.BookButton.Location = New System.Drawing.Point(327, 140)
-        Me.BookButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.BookButton.Location = New System.Drawing.Point(245, 114)
         Me.BookButton.Name = "BookButton"
-        Me.BookButton.Size = New System.Drawing.Size(129, 53)
+        Me.BookButton.Size = New System.Drawing.Size(97, 43)
         Me.BookButton.TabIndex = 23
         Me.BookButton.Text = "Book"
         Me.BookButton.UseVisualStyleBackColor = False
@@ -100,19 +97,17 @@ Partial Class bookBus
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(8, 91)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(6, 74)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(43, 18)
+        Me.Label8.Size = New System.Drawing.Size(36, 14)
         Me.Label8.TabIndex = 23
         Me.Label8.Text = "Email:"
         '
         'EmailTextBox
         '
-        Me.EmailTextBox.Location = New System.Drawing.Point(141, 87)
-        Me.EmailTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.EmailTextBox.Location = New System.Drawing.Point(106, 71)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(173, 22)
+        Me.EmailTextBox.Size = New System.Drawing.Size(131, 20)
         Me.EmailTextBox.TabIndex = 22
         '
         'Label7
@@ -121,19 +116,17 @@ Partial Class bookBus
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(8, 59)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(6, 48)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(104, 18)
+        Me.Label7.Size = New System.Drawing.Size(81, 14)
         Me.Label7.TabIndex = 21
         Me.Label7.Text = "Phone Number:"
         '
         'PhoneNumTextBox
         '
-        Me.PhoneNumTextBox.Location = New System.Drawing.Point(141, 55)
-        Me.PhoneNumTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.PhoneNumTextBox.Location = New System.Drawing.Point(106, 45)
         Me.PhoneNumTextBox.Name = "PhoneNumTextBox"
-        Me.PhoneNumTextBox.Size = New System.Drawing.Size(173, 22)
+        Me.PhoneNumTextBox.Size = New System.Drawing.Size(131, 20)
         Me.PhoneNumTextBox.TabIndex = 20
         '
         'Label13
@@ -142,10 +135,9 @@ Partial Class bookBus
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(11, 258)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Location = New System.Drawing.Point(8, 210)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(58, 18)
+        Me.Label13.Size = New System.Drawing.Size(46, 14)
         Me.Label13.TabIndex = 33
         Me.Label13.Text = "Change:"
         '
@@ -155,27 +147,24 @@ Partial Class bookBus
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(11, 130)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Location = New System.Drawing.Point(8, 106)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(74, 18)
+        Me.Label12.Size = New System.Drawing.Size(59, 14)
         Me.Label12.TabIndex = 31
         Me.Label12.Text = "Cash (RM):"
         '
         'CashTextBox
         '
-        Me.CashTextBox.Location = New System.Drawing.Point(144, 127)
-        Me.CashTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.CashTextBox.Location = New System.Drawing.Point(108, 103)
         Me.CashTextBox.Name = "CashTextBox"
-        Me.CashTextBox.Size = New System.Drawing.Size(173, 22)
+        Me.CashTextBox.Size = New System.Drawing.Size(131, 20)
         Me.CashTextBox.TabIndex = 30
         '
         'TotalTextBox
         '
-        Me.TotalTextBox.Location = New System.Drawing.Point(144, 95)
-        Me.TotalTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.TotalTextBox.Location = New System.Drawing.Point(108, 77)
         Me.TotalTextBox.Name = "TotalTextBox"
-        Me.TotalTextBox.Size = New System.Drawing.Size(173, 22)
+        Me.TotalTextBox.Size = New System.Drawing.Size(131, 20)
         Me.TotalTextBox.TabIndex = 28
         '
         'Label10
@@ -184,19 +173,17 @@ Partial Class bookBus
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(11, 66)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(8, 54)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(77, 18)
+        Me.Label10.Size = New System.Drawing.Size(64, 14)
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "Service Tax:"
         '
         'ServiceTaxTextBox
         '
-        Me.ServiceTaxTextBox.Location = New System.Drawing.Point(144, 63)
-        Me.ServiceTaxTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.ServiceTaxTextBox.Location = New System.Drawing.Point(108, 51)
         Me.ServiceTaxTextBox.Name = "ServiceTaxTextBox"
-        Me.ServiceTaxTextBox.Size = New System.Drawing.Size(173, 22)
+        Me.ServiceTaxTextBox.Size = New System.Drawing.Size(131, 20)
         Me.ServiceTaxTextBox.TabIndex = 26
         '
         'Label9
@@ -205,19 +192,17 @@ Partial Class bookBus
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(11, 34)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(8, 28)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(79, 18)
+        Me.Label9.Size = New System.Drawing.Size(65, 14)
         Me.Label9.TabIndex = 25
         Me.Label9.Text = "Ticket Price:"
         '
         'TicketPriceTextBox
         '
-        Me.TicketPriceTextBox.Location = New System.Drawing.Point(144, 31)
-        Me.TicketPriceTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.TicketPriceTextBox.Location = New System.Drawing.Point(108, 25)
         Me.TicketPriceTextBox.Name = "TicketPriceTextBox"
-        Me.TicketPriceTextBox.Size = New System.Drawing.Size(173, 22)
+        Me.TicketPriceTextBox.Size = New System.Drawing.Size(131, 20)
         Me.TicketPriceTextBox.TabIndex = 24
         '
         'GroupBox1
@@ -235,11 +220,9 @@ Partial Class bookBus
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(128, 49)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Location = New System.Drawing.Point(96, 40)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox1.Size = New System.Drawing.Size(464, 231)
+        Me.GroupBox1.Size = New System.Drawing.Size(348, 188)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Bus Details"
@@ -248,60 +231,54 @@ Partial Class bookBus
         '
         Me.SeatNoComboBox.FormattingEnabled = True
         Me.SeatNoComboBox.Items.AddRange(New Object() {"LEFT 1", "LEFT 2", "RIGHT 1", "RIGHT 2"})
-        Me.SeatNoComboBox.Location = New System.Drawing.Point(141, 158)
-        Me.SeatNoComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.SeatNoComboBox.Location = New System.Drawing.Point(106, 128)
         Me.SeatNoComboBox.Name = "SeatNoComboBox"
-        Me.SeatNoComboBox.Size = New System.Drawing.Size(173, 24)
+        Me.SeatNoComboBox.Size = New System.Drawing.Size(131, 21)
         Me.SeatNoComboBox.TabIndex = 25
         '
         'SeatRowComboBox
         '
         Me.SeatRowComboBox.FormattingEnabled = True
         Me.SeatRowComboBox.Items.AddRange(New Object() {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"})
-        Me.SeatRowComboBox.Location = New System.Drawing.Point(141, 193)
-        Me.SeatRowComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.SeatRowComboBox.Location = New System.Drawing.Point(106, 157)
         Me.SeatRowComboBox.Name = "SeatRowComboBox"
-        Me.SeatRowComboBox.Size = New System.Drawing.Size(173, 24)
+        Me.SeatRowComboBox.Size = New System.Drawing.Size(131, 21)
         Me.SeatRowComboBox.TabIndex = 24
         '
         'DepartureTimeComboBox
         '
         Me.DepartureTimeComboBox.FormattingEnabled = True
         Me.DepartureTimeComboBox.Items.AddRange(New Object() {"7.00 AM ", "9.00 AM ", "11.00 AM ", "02.00 PM ", "05.00 PM ", "08.00 PM ", "11.00 PM "})
-        Me.DepartureTimeComboBox.Location = New System.Drawing.Point(141, 123)
-        Me.DepartureTimeComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.DepartureTimeComboBox.Location = New System.Drawing.Point(106, 100)
         Me.DepartureTimeComboBox.Name = "DepartureTimeComboBox"
-        Me.DepartureTimeComboBox.Size = New System.Drawing.Size(173, 24)
+        Me.DepartureTimeComboBox.Size = New System.Drawing.Size(131, 21)
         Me.DepartureTimeComboBox.TabIndex = 21
         '
         'DestinationComboBox
         '
         Me.DestinationComboBox.FormattingEnabled = True
         Me.DestinationComboBox.Items.AddRange(New Object() {"Terminal Bersepadu Selatan (TBS)", "Jitra Bus Terminal", "Johor Raya Bus Terminal", "Kuanatan Sentral Bus Terminal", "Melaka Sentral Bus Terminal", "Pontian Bus Terminal", "Sungai Petani Bus Station"})
-        Me.DestinationComboBox.Location = New System.Drawing.Point(141, 90)
-        Me.DestinationComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.DestinationComboBox.Location = New System.Drawing.Point(106, 73)
         Me.DestinationComboBox.Name = "DestinationComboBox"
-        Me.DestinationComboBox.Size = New System.Drawing.Size(173, 24)
+        Me.DestinationComboBox.Size = New System.Drawing.Size(131, 21)
         Me.DestinationComboBox.TabIndex = 20
         '
         'CurrentPlaceComboBox
         '
         Me.CurrentPlaceComboBox.FormattingEnabled = True
         Me.CurrentPlaceComboBox.Items.AddRange(New Object() {"Hentian Bas Greenwood", "Terminal Bersepadu Selatan (TBS)"})
-        Me.CurrentPlaceComboBox.Location = New System.Drawing.Point(141, 58)
-        Me.CurrentPlaceComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.CurrentPlaceComboBox.Location = New System.Drawing.Point(106, 47)
         Me.CurrentPlaceComboBox.Name = "CurrentPlaceComboBox"
-        Me.CurrentPlaceComboBox.Size = New System.Drawing.Size(173, 24)
+        Me.CurrentPlaceComboBox.Size = New System.Drawing.Size(131, 21)
         Me.CurrentPlaceComboBox.TabIndex = 19
         '
         'BusNameComboBox
         '
         Me.BusNameComboBox.FormattingEnabled = True
         Me.BusNameComboBox.Items.AddRange(New Object() {"Perdana Express", "Sani Express", "Adik Beradik", "Transnasional ", "Perak Transit", "Pancaran Matahari ", "Mayang Sari Express"})
-        Me.BusNameComboBox.Location = New System.Drawing.Point(141, 27)
-        Me.BusNameComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.BusNameComboBox.Location = New System.Drawing.Point(106, 22)
         Me.BusNameComboBox.Name = "BusNameComboBox"
-        Me.BusNameComboBox.Size = New System.Drawing.Size(173, 24)
+        Me.BusNameComboBox.Size = New System.Drawing.Size(131, 21)
         Me.BusNameComboBox.TabIndex = 18
         '
         'Label5
@@ -310,10 +287,9 @@ Partial Class bookBus
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(8, 159)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(6, 129)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 18)
+        Me.Label5.Size = New System.Drawing.Size(31, 14)
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "Seat:"
         '
@@ -323,10 +299,9 @@ Partial Class bookBus
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(8, 127)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(6, 103)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 18)
+        Me.Label3.Size = New System.Drawing.Size(86, 14)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "Departure Time:"
         '
@@ -336,10 +311,9 @@ Partial Class bookBus
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(8, 95)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(6, 77)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(116, 18)
+        Me.Label2.Size = New System.Drawing.Size(95, 14)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Destination Place:"
         '
@@ -349,10 +323,9 @@ Partial Class bookBus
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(8, 63)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(6, 51)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(93, 18)
+        Me.Label1.Size = New System.Drawing.Size(75, 14)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Current Place:"
         '
@@ -362,10 +335,9 @@ Partial Class bookBus
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(8, 31)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(6, 25)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(73, 18)
+        Me.Label4.Size = New System.Drawing.Size(58, 14)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Bus Name:"
         '
@@ -375,10 +347,9 @@ Partial Class bookBus
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(11, 98)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(8, 80)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(74, 18)
+        Me.Label11.Size = New System.Drawing.Size(60, 14)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Total (RM):"
         '
@@ -398,11 +369,9 @@ Partial Class bookBus
         Me.GroupBox3.Controls.Add(Me.Label9)
         Me.GroupBox3.Controls.Add(Me.TicketPriceTextBox)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
-        Me.GroupBox3.Location = New System.Drawing.Point(613, 49)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Location = New System.Drawing.Point(460, 40)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox3.Size = New System.Drawing.Size(327, 455)
+        Me.GroupBox3.Size = New System.Drawing.Size(245, 370)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Total Price"
@@ -411,10 +380,9 @@ Partial Class bookBus
         '
         Me.ViewTicketButton.BackColor = System.Drawing.Color.White
         Me.ViewTicketButton.ForeColor = System.Drawing.Color.Black
-        Me.ViewTicketButton.Location = New System.Drawing.Point(189, 395)
-        Me.ViewTicketButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.ViewTicketButton.Location = New System.Drawing.Point(142, 321)
         Me.ViewTicketButton.Name = "ViewTicketButton"
-        Me.ViewTicketButton.Size = New System.Drawing.Size(129, 53)
+        Me.ViewTicketButton.Size = New System.Drawing.Size(97, 43)
         Me.ViewTicketButton.TabIndex = 34
         Me.ViewTicketButton.Text = "View Ticket"
         Me.ViewTicketButton.UseVisualStyleBackColor = False
@@ -426,19 +394,17 @@ Partial Class bookBus
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft PhagsPa", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(8, 27)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(6, 22)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(72, 18)
+        Me.Label6.Size = New System.Drawing.Size(58, 14)
         Me.Label6.TabIndex = 19
         Me.Label6.Text = "Full Name:"
         '
         'FullnameTextBox
         '
-        Me.FullnameTextBox.Location = New System.Drawing.Point(141, 23)
-        Me.FullnameTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.FullnameTextBox.Location = New System.Drawing.Point(106, 19)
         Me.FullnameTextBox.Name = "FullnameTextBox"
-        Me.FullnameTextBox.Size = New System.Drawing.Size(173, 22)
+        Me.FullnameTextBox.Size = New System.Drawing.Size(131, 20)
         Me.FullnameTextBox.TabIndex = 18
         '
         'GroupBox2
@@ -452,37 +418,35 @@ Partial Class bookBus
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.FullnameTextBox)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(128, 304)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Location = New System.Drawing.Point(96, 247)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox2.Size = New System.Drawing.Size(464, 201)
+        Me.GroupBox2.Size = New System.Drawing.Size(348, 163)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Pessenger's Details"
         '
         'BackButton
         '
-        Me.BackButton.Location = New System.Drawing.Point(25, 32)
+        Me.BackButton.Location = New System.Drawing.Point(19, 26)
+        Me.BackButton.Margin = New System.Windows.Forms.Padding(2)
         Me.BackButton.Name = "BackButton"
-        Me.BackButton.Size = New System.Drawing.Size(47, 38)
+        Me.BackButton.Size = New System.Drawing.Size(35, 31)
         Me.BackButton.TabIndex = 31
         Me.BackButton.Text = "<"
         Me.BackButton.UseVisualStyleBackColor = True
         '
         'bookBus
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.testing.My.Resources.Resources.bgbusgo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "bookBus"
         Me.Text = "BusGo | Booking Ticket"
         Me.GroupBox1.ResumeLayout(False)

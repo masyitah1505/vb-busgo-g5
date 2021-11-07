@@ -24,8 +24,6 @@ Partial Class designDashboard
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(designDashboard))
         Me.LogOutButton = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.ViewBusAvailabilityButton = New System.Windows.Forms.Button()
         Me.BookBusButton = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -47,30 +45,6 @@ Partial Class designDashboard
         Me.LogOutButton.TabIndex = 0
         Me.LogOutButton.Text = "LOG OUT"
         Me.LogOutButton.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(38, 215)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(49, 16)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Label1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(104, 215)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 16)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Label2"
         '
         'ViewBusAvailabilityButton
         '
@@ -170,8 +144,6 @@ Partial Class designDashboard
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.BookBusButton)
         Me.Controls.Add(Me.ViewBusAvailabilityButton)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LogOutButton)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "designDashboard"
@@ -182,8 +154,6 @@ Partial Class designDashboard
     End Sub
 
     Friend WithEvents LogOutButton As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents ViewBusAvailabilityButton As Button
     Friend WithEvents BookBusButton As Button
     Friend WithEvents Label8 As Label
