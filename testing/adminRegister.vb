@@ -47,6 +47,8 @@ Public Class adminRegister
 
         End Using
         conn.Close()
+        Me.Close()
+        designDashboard.Show()
     End Sub
 
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click

@@ -8,13 +8,10 @@ Public Class busAvailability
     End Sub
 
     Private Sub busAvailability_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " & Application.StartupPath & "\RegisterStaff.accdb")
+
         'TODO: This line of code loads data into the 'RegisterStaffDataSet.BusAndPassengers' table. You can move, or remove it, as needed.
         Me.BusAndPassengersTableAdapter.Fill(Me.RegisterStaffDataSet.BusAndPassengers)
-        If conn.State = ConnectionState.Closed Then
-            conn.Open()
-        End If
-        conn.Close()
+
     End Sub
 
     Private Sub PreviousButton_Click(sender As Object, e As EventArgs) Handles PreviousButton.Click

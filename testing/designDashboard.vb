@@ -15,7 +15,7 @@
     End Sub
 
     Private Sub LogOutButton_Click(sender As Object, e As EventArgs) Handles LogOutButton.Click
-        Me.Hide()
-        adminHomepage.Show()
+        Me.Close()
+
     End Sub
 End Class
