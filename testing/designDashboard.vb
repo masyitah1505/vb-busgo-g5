@@ -16,6 +16,13 @@
 
     Private Sub LogOutButton_Click(sender As Object, e As EventArgs) Handles LogOutButton.Click
         Me.Close()
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 43563f2424bf5eec6a6d590e8b045734b0777887
+>>>>>>> Stashed changes
     End Sub
 End Class
